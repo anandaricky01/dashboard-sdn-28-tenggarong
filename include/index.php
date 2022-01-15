@@ -19,7 +19,7 @@
       <a href="data-siswa" class="btn btn-primary px-3 pt-2 shadow zoom"><h4>Data Siswa</h4></a>
     </div>
     <div class="col-4 text-center">
-      <a href="" class="btn btn-warning px-3 pt-2 shadow zoom"><h4>Data Guru</h4></a>
+      <a href="data-guru" class="btn btn-warning px-3 pt-2 shadow zoom"><h4>Data Guru</h4></a>
     </div>
   </div>
 </div>
