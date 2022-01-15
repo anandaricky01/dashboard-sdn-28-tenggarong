@@ -50,7 +50,7 @@
     </div>
     <div class="row mb-3">
         <div class="col text-center">
-            <h1>Cari Data Siswa..</h1>
+            <h1>Cari Data Guru..</h1>
         </div>
     </div>
     <div class="row justify-content-center mb-5">

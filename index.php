@@ -103,13 +103,18 @@
   </head>
   <body class="bg-light">
   	<?php include('includes/navbar.php'); ?>
-      <?php if (isset($_GET['include'])) {
+      <?php 
+      if (isset($_GET['include'])) {
           // datasiswa
     	   if($_GET['include'] == 'data-siswa'){
             include('include/datasiswa.php');
          } else if($_GET['include'] == 'detail-siswa'){
           include('include/detailsiswa.php');
-       }
+        } else if($_GET['include'] == 'data-guru'){
+          include('include/dataguru.php');
+        } else if($_GET['include'] == 'detail-guru'){
+          include('include/detailguru.php');
+        }
           // home
          else {
             include('include/index.php');
