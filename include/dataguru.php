@@ -10,7 +10,6 @@
     if(isset($_SESSION['katakunci'])){
         $katakunci = $_SESSION['katakunci'];
     }
-
     // batas data yang terlihat
     $batas = 5;
 
@@ -51,7 +50,7 @@
     </div>
     <div class="row mb-3">
         <div class="col text-center">
-            <h1>Cari Data Siswa..</h1>
+            <h1>Cari Data Guru..</h1>
         </div>
     </div>
     <div class="row justify-content-center mb-5">
@@ -143,25 +142,25 @@
                    $setelah = $halaman+1;
                    if($halaman!=1){
                      echo "<li class='page-item'><a class='page-link' 
-                     href='data-siswa&halaman=1'>First</a></li>";
+                     href='data-guru&halaman=1'>First</a></li>";
                      echo "<li class='page-item'><a class='page-link' 
-                     href='data-siswa&halaman=$sebelum'>«</a></li>";
+                     href='data-guru&halaman=$sebelum'>«</a></li>";
                   }
                   for($i=1; $i<=$pag_halaman; $i++){
                       if ($i > $halaman - 5 and $i < $halaman + 5 ) {
                          if($i!=$halaman){
                              echo "<li class='page-item'><a class='page-link' 
-                            href='data-siswa&halaman=$i'>$i</a></li>";
+                            href='data-guru&halaman=$i'>$i</a></li>";
                          }else{
-                            echo "<li class='page-item active'><a class='page-link'>$i</a></li>";
+                            echo "<li class='page-item active'><a class='page-link' href='data-guru&halaman=$i'>$i</a></li>";
                          }
                       }
                    }
                    if($halaman!=$pag_halaman){
                         echo "<li class='page-item'><a class='page-link' 
-                        href='data-siswa&halaman=$setelah'>»</a></li>";
+                        href='data-guru&halaman=$setelah'>»</a></li>";
                         echo "<li class='page-item'><a class='page-link' 
-                        href='data-siswa&halaman=$pag_halaman'>Last</a></li>";
+                        href='data-guru&halaman=$pag_halaman'>Last</a></li>";
                    }
                               
                 }?>

@@ -5,3 +5,4 @@ RewriteEngine On
 RewriteRule ^([-a-z]*)$ index.php?include=$1 [L]
 RewriteRule ^([-a-z]*)&data=([0-9]*)$ index.php?include=$1&data=$2 [L]
 RewriteRule ^([-a-z]*)&data=([0-9]*)&halaman=([-a-z]*)$ index.php?include=$1&data=$2&halaman=$3 [L]
+RewriteRule ^([-a-z]*)&halaman=([0-9]*)$ index.php?include=$1&halaman=$2 [L]
