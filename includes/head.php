@@ -16,3 +16,4 @@
         }
     </style>
     <title><?php echo $_GET['include'] ?> | SDN 028 TENGGARONG SEBERANG</title>
+    
