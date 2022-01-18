@@ -129,7 +129,7 @@
     // algoritma pagination
         $sql_pag = "SELECT `id` FROM `data-utama-siswa`"; 
 
-        if (!empty($katakunci_)){
+        if (!empty($katakunci)){
         $sql_pag .= " WHERE `nama` LIKE '%$katakunci%'";
         } 
 
@@ -181,4 +181,3 @@
 </div>
   </div>
 </div>
-
