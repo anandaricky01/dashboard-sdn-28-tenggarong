@@ -67,7 +67,7 @@
     </div>
     <div class="row justify-content-center mb-5">
         <div class="col-md-5 text-center">
-            <form action="" method="post">
+            <form action="data-siswa&halaman=1" method="post">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Cari Nama Siswa..." name="katakunci">
                     <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
@@ -130,7 +130,7 @@
     // algoritma pagination
         $sql_pag = "SELECT `id` FROM `data-utama-siswa`"; 
 
-        if (!empty($katakunci_)){
+        if (!empty($katakunci)){
         $sql_pag .= " WHERE `nama` LIKE '%$katakunci%'";
         } 
 
@@ -182,4 +182,3 @@
 </div>
   </div>
 </div>
-
