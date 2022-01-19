@@ -129,7 +129,11 @@
         $sql_pag = "SELECT `NO` FROM `data-guru`"; 
 
         if (!empty($katakunci)){
+<<<<<<< HEAD
         $sql_pag .= " WHERE `NAMA` LIKE '%$katakunci%'";
+=======
+        $sql_pag .= " WHERE `nama` LIKE '%$katakunci%'";
+>>>>>>> c861a72bf19ff98e02e268c98166c81b4968c9ea
         } 
 
         $sql_pag .= " ORDER BY `NAMA`";
@@ -179,4 +183,8 @@
     </div>
 </div>
   </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> c861a72bf19ff98e02e268c98166c81b4968c9ea
