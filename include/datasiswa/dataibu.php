@@ -19,7 +19,7 @@ while ($data_siswa = mysqli_fetch_assoc($query)) {
 ?>
 
 <div>
-<?php  
+    <?php  
         if (isset($id)) {
     ?>
         <table class="table mt-3">
