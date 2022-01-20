@@ -11,7 +11,7 @@
         $katakunci = $_SESSION['katakunci'];
     }
     // batas data yang terlihat
-    $batas = 5;
+    $batas = 2;
 
     // apakah tidak terdapat variabel get halaman
     if(!isset($_GET['halaman'])){
@@ -30,14 +30,14 @@
         $posisi = ($halaman-1) * $batas;
     }
 
-    $sql_data_siswa = "SELECT * FROM `data-utama-siswa`";
+    $sql_data_siswa = "SELECT * FROM `data-guru`";
 
     if (!empty($katakunci)){
         $katakunci = $_SESSION["katakunci"];
-        $sql_data_siswa .= " where `nama` LIKE '%$katakunci%'";
+        $sql_data_siswa .= " where `NAMA` LIKE '%$katakunci%'";
     } 
 
-    $sql_data_siswa .= " ORDER BY `nama` limit $posisi, $batas";
+    $sql_data_siswa .= " ORDER BY `NAMA` limit $posisi, $batas";
     $query = mysqli_query($koneksi, $sql_data_siswa);
 
 ?>
@@ -66,9 +66,9 @@
     </div>
     <div class="row justify-content-center mb-5">
         <div class="col-md-5 text-center">
-            <form action="" method="post">
+            <form action="data-guru&halaman=1" method="post">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Cari Nama Siswa..." name="katakunci">
+                    <input type="text" class="form-control" placeholder="Cari Nama Guru..." name="katakunci">
                     <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -87,6 +87,8 @@
                     <th scope="col">NIP</th>
                     <th scope="col">Mata Pelajaran</th>
                     <th scope="col">Kelas</th>
+                    <th scope="col">Kode Guru</th>
+                    <th scope="col">Tugas Jabatan</th>
                     <th scope="col">L/P</th>
                     <th scope="col">Detail</th>
                 </tr>
@@ -94,46 +96,48 @@
             <tbody>
                 <?php $i = ++$posisi;
                 while ($data = mysqli_fetch_assoc($query)) {
-                    $id = $data['id'];
-                    $nis = $data['nis'];
-                    $nisn = $data['nisn'];
-                    $tahun_masuk = $data['tahun_masuk'];
-                    $nama = $data['nama'];
-                    $jenis_kelamin = $data['jenis_kelamin'];
-                    $kelas = $data['kelas'];
+                    $id = $data['NO'];
+                    $nip = $data['NIP_BARU'];
+                    $kode = $data['KODE'];
+                    $nama = $data['NAMA'];
+                    $jenis_kelamin = $data['JK'];
+                    $tugas_jabatan = $data['TUGAS_JABATAN'];
                 ?>
                     <tr>
                         <th scope="row"><?php echo $i; $i++;?></th>
                         <td><?php echo $nama; ?></td>
-                        <td><?php echo $nis; ?></td>
-                        <td><?php echo $nisn; ?></td>
-                        <td>Kelas <?php echo $kelas; ?></td>
+                        <td><?php echo $nip; ?></td>
+                        <td><?php echo $kode; ?></td>
+                        <td><?php echo $tugas_jabatan; ?></td>
                         <td><?php echo $jenis_kelamin; ?></td>
                         <td>
                             <a href="detail-guru&data=<?= $id;?>&halaman=utama" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
                                 <span class="badge bg-primary">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal<?php echo $id;?>" data-bs-whatever="@mdo"  data-bs-placement="right" title="Tooltip on right"><span class="badge bg-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                         <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                     </svg>
                                 </span>
-                            </a>
+                            </button>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
-
     <?php 
+    // modal detail guru
+    include('include/detailguru.php');
     // algoritma pagination
-        $sql_pag = "SELECT `id` FROM `data-utama-siswa`"; 
+        $sql_pag = "SELECT `NO` FROM `data-guru`"; 
 
         if (!empty($katakunci)){
+         $sql_pag .= " WHERE `NAMA` LIKE '%$katakunci%'";
         $sql_pag .= " WHERE `nama` LIKE '%$katakunci%'";
-        } 
+    } 
 
-        $sql_pag .= " ORDER BY `nama`";
+        $sql_pag .= " ORDER BY `NAMA`";
 
         $query_pag = mysqli_query($koneksi,$sql_pag);
         $pag_data = mysqli_num_rows($query_pag);
@@ -180,4 +184,6 @@
     </div>
 </div>
   </div>
+</div>
+</div>
 </div>
