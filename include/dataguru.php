@@ -85,8 +85,6 @@
                     <th scope="col">No.</th>
                     <th scope="col">Nama</th>
                     <th scope="col">NIP</th>
-                    <th scope="col">Mata Pelajaran</th>
-                    <th scope="col">Kelas</th>
                     <th scope="col">Kode Guru</th>
                     <th scope="col">Tugas Jabatan</th>
                     <th scope="col">L/P</th>
@@ -111,31 +109,33 @@
                         <td><?php echo $tugas_jabatan; ?></td>
                         <td><?php echo $jenis_kelamin; ?></td>
                         <td>
-                            <a href="detail-guru&data=<?= $id;?>&halaman=utama" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#Modal<?php echo $id;?>" data-bs-whatever="@mdo"  data-bs-placement="right" title="Tooltip on right">
                                 <span class="badge bg-primary">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal<?php echo $id;?>" data-bs-whatever="@mdo"  data-bs-placement="right" title="Tooltip on right"><span class="badge bg-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                         <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                     </svg>
                                 </span>
-                            </button>
+                            </a>
                         </td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
+    <div class="container">
+        <?php 
+            // modal detail guru
+        include('include/detailguru.php');
+         ?>
+    </div>
     <?php 
-    // modal detail guru
-    include('include/detailguru.php');
     // algoritma pagination
         $sql_pag = "SELECT `NO` FROM `data-guru`"; 
 
         if (!empty($katakunci)){
-         $sql_pag .= " WHERE `NAMA` LIKE '%$katakunci%'";
-        $sql_pag .= " WHERE `nama` LIKE '%$katakunci%'";
-    } 
+        $sql_pag .= " WHERE `NAMA` LIKE '%$katakunci%'";
+        } 
 
         $sql_pag .= " ORDER BY `NAMA`";
 
@@ -184,6 +184,4 @@
     </div>
 </div>
   </div>
-</div>
-</div>
 </div>

@@ -52,29 +52,8 @@
         $NO_PSRT_4 = $data['NO_PSRT_4'];
         $NO_SKTP_4 = $data['NO_SKTP_4'];
 
-<<<<<<< HEAD
-<div class="card mx-5 mt-4 border-rounded">
-  <div class="card-body">
-      <ul class="breadcrumb"  style="margin-bottom: 5px;">
-        <li class="breadcrumb-item"><a href="home" class="text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/><path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg> Home</a></li>
-        <li class="breadcrumb-item"><a href="data-guru" class="text-decoration-none">Data Guru</a></li>
-        <li class="breadcrumb-item">Detail Guru</a></li>
-      </ul>
-  </div>
-</div>
-
-<div class="card mx-5 mt-4 border-rounded">
-  <div class="card-body">
-  <div class="container my-5">
-    <a href="data-guru" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-        </svg> Kembali</a>
-    <h1 class="text-center mb-5">Detail Guru</h1>
-=======
         
 ?>
->>>>>>> 09236a58d7422819735442454983eeb1729fd333
-
 <div class="modal fade" id="Modal<?php echo $id;?>" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -89,7 +68,7 @@
                 </div>
                 <div class="col p-2">
                     <div class="container">
-                    <table class="table">
+                    <table class="table table-striped">
                         <tbody>
                             <tr>
                                 <th scope="row">Nama</th>
@@ -115,8 +94,11 @@
                     </table>
                     </div>  
                 </div>
-                <div class="container">
-                    <table class="table m-5">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="container my-5">
+                    <table class="table table-striped">
                         <tbody>
                             <tr>
                                 <th scope="row">Nama Saja</th>
@@ -292,8 +274,8 @@
                             </tr>
                         </tbody>
                     </table>
+                </div> 
                 </div>
-                    
             </div>
         </div>
         <div class="modal-footer">
@@ -302,9 +284,4 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-  </div>
-</div>
-=======
 <?php } ?>
->>>>>>> 09236a58d7422819735442454983eeb1729fd333
