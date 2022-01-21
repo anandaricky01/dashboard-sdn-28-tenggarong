@@ -95,7 +95,6 @@
             <tbody>
                 <?php $i = ++$posisi;
                 while ($data = mysqli_fetch_assoc($query)) {
-                    $id = $data['id'];
                     $nis = $data['nis'];
                     $nisn = $data['nisn'];
                     $tahun_masuk = $data['tahun_masuk'];
@@ -111,7 +110,7 @@
                         <td>Kelas <?php echo $kelas; ?></td>
                         <td><?php echo $jenis_kelamin; ?></td>
                         <td>
-                            <a href="detail-siswa&data=<?= $id;?>&halaman=utama" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+                            <a href="detail-siswa&data=<?= $nis;?>&halaman=utama" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
                                 <span class="badge bg-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />

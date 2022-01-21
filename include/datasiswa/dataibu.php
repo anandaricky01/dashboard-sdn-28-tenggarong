@@ -1,5 +1,5 @@
 <?php
-$sql_data_siswa = "SELECT * FROM `data-ibu` WHERE `id`=$data";
+$sql_data_siswa = "SELECT * FROM `data-ibu` WHERE `nis`=$data";
 $query = mysqli_query($koneksi, $sql_data_siswa);
 
 while ($data_siswa = mysqli_fetch_assoc($query)) {
