@@ -1,22 +1,44 @@
 <?php
+
 $data = $_GET['data'];
 $halaman = $_GET['halaman'];
+
+$sql_foto_1 = "SELECT `foto` FROM `foto-siswa` WHERE `nis`=$data AND `kelas`=1";
+$sql_foto_4 = "SELECT `foto` FROM `foto-siswa` WHERE `nis`=$data AND `kelas`=4";
+$sql_foto_6 = "SELECT `foto` FROM `foto-siswa` WHERE `nis`=$data AND `kelas`=6";
+
+$query_foto_1 = mysqli_query($koneksi, $sql_foto_1);
+$query_foto_4 = mysqli_query($koneksi, $sql_foto_4);
+$query_foto_6 = mysqli_query($koneksi, $sql_foto_6);
+
+while($data_foto_1 = mysqli_fetch_assoc($query_foto_1)){
+    $foto_1 = $data_foto_1['foto'];
+}
+
+while($data_foto_4 = mysqli_fetch_assoc($query_foto_4)){
+    $foto_4 = $data_foto_4['foto'];
+}
+
+while($data_foto_6 = mysqli_fetch_assoc($query_foto_6)){
+    $foto_6 = $data_foto_6['foto'];
+}
+
 ?>
 
 <script>
     function first(){
         document.getElementById('foto')
-        .src="foto/img013.jpg";
+        .src="foto/<?= !empty($foto_1) ? $foto_1 : 'kosong.png'; ?>";
     }
      
     function second(){
         document.getElementById('foto')
-        .src="foto/zidane.jpg";
+        .src="foto/<?= !empty($foto_4) ? $foto_4 : 'kosong.png'; ?>";
     }
 
     function third(){
         document.getElementById('foto')
-        .src="foto/31.jpg";
+        .src="foto/<?= !empty($foto_6) ? $foto_6 : 'kosong.png'; ?>";
     }
 </script>
 
@@ -40,20 +62,25 @@ $halaman = $_GET['halaman'];
     <h1 class="text-center mb-5">Detail Siswa</h1>
 
     <div class="row">
-        <div class="col text-center">
-            <img id="foto" class="img-thumbnail" src="foto/img013.jpg" alt="" width="300px">
+        <div class="col-5 text-center">
+            <img id="foto" class="img-thumbnail" src="foto/<?= !empty($foto_1) ? $foto_1 : 'kosong.png'; ?>" alt="" width="300px">
             <div class="mt-3">
                 <button type="button" class="btn btn-primary" onclick=first();>Kelas 1</button>
                 <button type="button" class="btn btn-primary" onclick=second();>Kelas 4</button>
                 <button type="button" class="btn btn-primary" onclick=third();>Kelas 6</button>
             </div>
         </div>
-        <div class="col border rounded bg-white p-2">
+        <div class="col-7 border rounded bg-white p-2">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a href="detail-siswa&data=<?php echo $data ?>&halaman=utama" class="nav-link <?php if ($halaman == 'utama') {
                                                                                                         echo "active";
                                                                                                     } ?>" id="datautama">Data Utama</a>
+                </li>
+                <li class="nav-item">
+                    <a href="detail-siswa&data=<?php echo $data ?>&halaman=sekolah" class="nav-link <?php if ($halaman == 'sekolah') {
+                                                                                                        echo "active";
+                                                                                                    } ?>" id="datasekolah">Data Sekolah</a>
                 </li>
                 <li class="nav-item">
                     <a href="detail-siswa&data=<?php echo $data ?>&halaman=diri" class="nav-link <?php if ($halaman == 'diri') {
@@ -85,11 +112,18 @@ $halaman = $_GET['halaman'];
                 include('include/datasiswa/datawali.php');
             } else if ($halaman == 'diri') {
                 include('include/datasiswa/datadiri.php');
+            } else if ($halaman == 'sekolah') {
+                include('include/datasiswa/datasekolah.php');
             } else {
                 include('include/datasiswa/datasiswa.php');
             }
             ?>
         </div>
+    </div>
+    <div class="row mt-4 border rounded bg-white p-2">
+        <?php if ($halaman == 'diri') {
+            include('include/datasiswa/datadiri2.php');
+        } ?>
     </div>
 </div>
   </div>

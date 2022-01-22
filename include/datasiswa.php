@@ -57,7 +57,7 @@
   <div class="container mt-5">
     <div class="row mb-3">
         <div class="col text-center">
-            <img src="foto/search.png" alt="" width="150px">
+            <img src="img/search.png" alt="" width="150px">
         </div>
     </div>
     <div class="row mb-3">

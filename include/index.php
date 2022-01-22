@@ -20,7 +20,7 @@
     </div>
     <div class="row mb-4">
       <div class="col text-center"> 
-        <img src="foto/Lambang_Kab._Kutai_Kertanegara.png" alt="Lambang-Kabupaten-Kutai-Kertanegara" width="250px">
+        <img src="img/Lambang_Kab._Kutai_Kertanegara.png" alt="Lambang-Kabupaten-Kutai-Kertanegara" width="250px">
       </div>
     </div>
     <div class="row justify-content-center">

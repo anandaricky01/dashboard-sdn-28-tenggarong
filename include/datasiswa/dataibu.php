@@ -19,105 +19,52 @@ while ($data_siswa = mysqli_fetch_assoc($query)) {
 ?>
 
 <div>
-    <?php  
-        if (isset($id)) {
-    ?>
         <table class="table mt-3">
             <tbody>
                 <tr>
                     <th scope="row">Nama</th>
-                    <td><?= $nama; ?></td>
+                    <td><?= !empty($nama) ? $nama : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">NIS</th>
-                    <td><?= $nis; ?></td>
+                    <td><?= !empty($nis) ? $nis : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Tempat Lahir</th>
-                    <td><?= $tempat_lahir; ?></td>
+                    <td><?= !empty($tempat_lahir) ? $tempat_lahir : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Tanggal Lahir</th>
-                    <td><?= $tanggal_lahir; ?></td>
+                    <td><?= !empty($tanggal_lahir) ? $tanggal_lahir : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">No Hp</th>
-                    <td><?= $nohp; ?></td>
+                    <td><?= !empty($nohp) ? $nohp : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Pendidikan</th>
-                    <td><?= $pendidikan; ?></td>
+                    <td><?= !empty($pendidikan) ? $pendidikan : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Pekerjaan</th>
-                    <td><?= $pekerjaan; ?></td>
+                    <td><?= !empty($pekerjaan) ? $pekerjaan : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Penghasilan</th>
-                    <td><?= $penghasilan; ?></td>
+                    <td><?= !empty($penghasilan) ? $penghasilan : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Agama</th>
-                    <td><?= $agama; ?></td>
+                    <td><?= !empty($agama) ? $agama : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Status</th>
-                    <td><?= $status; ?></td>
+                    <td><?= !empty($status) ? $status : "--"; ?></td>
                 </tr>
                 <tr>
                     <th scope="row">Alamat</th>
-                    <td><?= $alamat; ?></td>
+                    <td><?= !empty($alamat) ? $alamat : "--"; ?></td>
                 </tr>
             </tbody>
         </table>
-    <?php } else { ?>
-        <table class="table mt-3">
-            <tbody>
-                <tr>
-                    <th scope="row">Nama</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">NIS</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Tempat Lahir</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Tanggal Lahir</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">No Hp</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Pendidikan</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Pekerjaan</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Penghasilan</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Agama</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Status</th>
-                    <td>--</td>
-                </tr>
-                <tr>
-                    <th scope="row">Alamat</th>
-                    <td>--</td>
-                </tr>
-            </tbody>
-        </table>
-    <?php } ?>
 </div>

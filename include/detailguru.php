@@ -64,7 +64,7 @@
         <div class="modal-body container">
             <div class="row">
                 <div class="col text-center">
-                    <img id="foto" class="img-thumbnail" src="foto/img013.jpg" alt="" width="200px">
+                    <img id="foto" class="img-thumbnail" src="img/img013.jpg" alt="" width="200px">
                 </div>
                 <div class="col p-2">
                     <div class="container">
