@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Jan 2022 pada 19.02
+-- Waktu pembuatan: 22 Jan 2022 pada 10.29
 -- Versi server: 10.4.20-MariaDB
 -- Versi PHP: 8.0.9
 
@@ -18,49 +18,47 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `data-sekolah`
+-- Database: `uaswebdinamis`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data-sekolah-siswa`
+-- Struktur dari tabel `role`
 --
 
-CREATE TABLE `data-sekolah-siswa` (
-  `id` int(11) NOT NULL,
-  `nis` varchar(100) NOT NULL,
-  `skhun` varchar(255) DEFAULT NULL,
-  `penerima_kps` varchar(100) DEFAULT NULL,
-  `no_kps` varchar(255) DEFAULT NULL,
-  `no_ujian_nasional` varchar(255) DEFAULT NULL,
-  `no_ijazah` varchar(255) DEFAULT NULL,
-  `penerima_kip` varchar(255) DEFAULT NULL,
-  `no_kip` varchar(255) DEFAULT NULL,
-  `nama_kip` varchar(100) DEFAULT NULL,
-  `layak_pip` varchar(100) DEFAULT NULL,
-  `alasan_pip` varchar(100) DEFAULT NULL
+CREATE TABLE `role` (
+  `id_role` int(11) NOT NULL,
+  `role` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `role`
+--
+
+INSERT INTO `role` (`id_role`, `role`) VALUES
+(1, 'Superadmin'),
+(2, 'Admin');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `data-sekolah-siswa`
+-- Indeks untuk tabel `role`
 --
-ALTER TABLE `data-sekolah-siswa`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`id_role`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT untuk tabel `data-sekolah-siswa`
+-- AUTO_INCREMENT untuk tabel `role`
 --
-ALTER TABLE `data-sekolah-siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `role`
+  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

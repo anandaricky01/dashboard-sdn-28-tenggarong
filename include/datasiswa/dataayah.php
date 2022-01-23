@@ -1,20 +1,20 @@
 <?php
-$sql_data_siswa = "SELECT * FROM `data-ayah` WHERE `nis`=$data";
-$query = mysqli_query($koneksi, $sql_data_siswa);
+$sql_data_ayah = "SELECT * FROM `data-ayah` WHERE `nis`=$data";
+$query = mysqli_query($koneksi, $sql_data_ayah);
 
-while ($data_siswa = mysqli_fetch_assoc($query)) {
-    $id = $data_siswa['id'];
-    $nis = $data_siswa['nis'];
-    $nama = $data_siswa['nama_ayah'];
-    $tempat_lahir = $data_siswa['tempat_lahir_ayah'];
-    $tanggal_lahir = $data_siswa['tanggal_lahir_ayah'];
-    $nohp = $data_siswa['nohp_ayah'];
-    $pendidikan = $data_siswa['pendidikan_ayah'];
-    $pekerjaan = $data_siswa['pekerjaan_ayah'];
-    $penghasilan = $data_siswa['penghasilan_ayah'];
-    $agama = $data_siswa['agama_ayah'];
-    $status = $data_siswa['status_ayah'];
-    $alamat = $data_siswa['alamat_ayah'];
+while ($data_ayah = mysqli_fetch_assoc($query)) {
+    $id = $data_ayah['id'];
+    $nis = $data_ayah['nis'];
+    $nama = $data_ayah['nama_ayah'];
+    $tempat_lahir = $data_ayah['tempat_lahir_ayah'];
+    $tanggal_lahir = $data_ayah['tanggal_lahir_ayah'];
+    $nohp = $data_ayah['nohp_ayah'];
+    $pendidikan = $data_ayah['pendidikan_ayah'];
+    $pekerjaan = $data_ayah['pekerjaan_ayah'];
+    $penghasilan = $data_ayah['penghasilan_ayah'];
+    $agama = $data_ayah['agama_ayah'];
+    $status = $data_ayah['status_ayah'];
+    $alamat = $data_ayah['alamat_ayah'];
 }
 ?>
 

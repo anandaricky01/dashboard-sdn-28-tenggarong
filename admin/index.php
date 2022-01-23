@@ -8,33 +8,22 @@
       }else if($include=="signout"){
         include("include/signout.php");
       } // kategori kategori kegiatan
-      else if($include=="konfirmasi-tambah-kategori-kegiatan"){
-        include("include/konfirmasitambahkategorikegiatan.php");
-      }else if($include=="konfirmasi-edit-kategori-kegiatan"){
-        include("include/konfirmasieditkategorikegiatan.php");
+      else if($include=="konfirmasi-tambah-data-siswa"){
+        include("include/konfirmasitambahsiswa.php");
+      }else if($include=="konfirmasi-edit-data-siswa"){
+        include("include/konfirmasieditsiswa.php");
         } // departemen
-      else if($include=="konfirmasi-tambah-departemen"){
-        include("include/konfirmasitambahdepartemen.php");
-      }else if($include=="konfirmasi-edit-departemen"){
-        include("include/konfirmasieditdepartemen.php");
-      } // kategori kegiatan
-      else if($include=="konfirmasi-tambah-kegiatan"){
-        include("include/konfirmasitambahkegiatan.php");
-      }else if($include=="konfirmasi-edit-kegiatan"){
-        include("include/konfirmasieditkegiatan.php");
-      }
+      else if($include=="konfirmasi-tambah-data-guru"){
+        include("include/konfirmasitambahguru.php");
+      }else if($include=="konfirmasi-edit-data-guru"){
+        include("include/konfirmasieditguru.php");
+      } 
       // kategori galeri
       else if($include=="konfirmasi-tambah-galeri"){
         include("include/konfirmasitambahgaleri.php");
       }else if($include=="konfirmasi-edit-galeri"){
         include("include/konfirmasieditgaleri.php");
       }
-      // proker
-      else if($include=="konfirmasi-tambah-proker"){
-        include("include/konfirmasitambahproker.php");
-      }else if($include=="konfirmasi-edit-proker"){
-        include("include/konfirmasieditproker.php");
-      } 
       // pengaturan user
       else if($include=="konfirmasi-tambah-user"){
         include("include/konfirmasitambahuser.php");
@@ -71,43 +60,26 @@ if(isset($_GET["include"])){
           <?php 
             // data master    
                 // kategori buku
-                if($include=="kategori-kegiatan"){
-                    include("include/kategorikegiatan.php");
-                }else if($include=="tambah-kategori-kegiatan"){
-                    include("include/tambahkategorikegiatan.php");
-                }else if($include=="edit-kategori-kegiatan"){
-                    include("include/editkategorikegiatan.php");
-                }
+                if($include=="data-siswa"){
+                    include("include/datasiswa.php");
+                }else if($include=="tambah-data-siswa"){
+                    include("include/tambahsiswa.php");
+                }else if($include=="edit-data-siswa"){
+                    include("include/editsiswa.php");
+                }else if($include=="detail-data-siswa"){
+                  include("include/detailsiswa.php");
+              }
                 // departemen
-                else if($include=="departemen"){
-                    include("include/departemen.php");
-                }else if($include=="tambah-departemen"){
-                    include("include/tambahdepartemen.php");
-                }else if($include=="edit-departemen"){
-                    include("include/editdepartemen.php");
-                }else if($include=="detail-departemen"){
-                    include("include/detaildepartemen.php");
+                else if($include=="data-guru"){
+                    include("include/dataguru.php");
+                }else if($include=="tambah-data-guru"){
+                    include("include/tambahguru.php");
+                }else if($include=="edit-data-guru"){
+                    include("include/editguru.php");
+                }else if($include=="detail-data-guru"){
+                    include("include/detailguru.php");
                 }
-                // proker
-                else if($include=="proker"){
-                    include("include/proker.php");
-                }else if($include=="tambah-proker"){
-                    include("include/tambahproker.php");
-                }else if($include=="edit-proker"){
-                    include("include/editproker.php");
-                }else if($include=="detail-proker"){
-                    include("include/detailproker.php");
-                }
-                // kategori blog
-                else if($include=="kegiatan"){
-                    include("include/kegiatan.php");
-                }else if($include=="tambah-kegiatan"){
-                    include("include/tambahkegiatan.php");
-                }else if($include=="edit-kegiatan"){
-                    include("include/editkegiatan.php");
-                }else if($include=="detail-kegiatan"){
-                    include("include/detailkegiatan.php");
-                }
+              
                 // galeri
                 else if($include=="galeri"){
                     include("include/galeri.php");
