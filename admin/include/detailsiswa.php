@@ -38,10 +38,15 @@
                 </div>
                 <?php 
                   include('datasiswa/datasiswa.php');
+                  echo "<br>";
                   include('datasiswa/datadiri.php');
+                  echo "<br>";
                   include('datasiswa/datasekolah.php');
+                  echo "<br>";
                   include('datasiswa/dataayah.php');
+                  echo "<br>";
                   include('datasiswa/dataibu.php');
+                  echo "<br>";
                   include('datasiswa/datawali.php');
                 ?>
               </div>

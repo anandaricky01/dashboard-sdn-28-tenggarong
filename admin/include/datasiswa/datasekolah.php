@@ -1,7 +1,6 @@
 <?php 
-    
+    $data = $_GET['data'];
 	$sql_data_siswa = "SELECT * FROM `data-sekolah-siswa` WHERE `nis`=$data";
-    var_dump($data);
 	$query_utama = mysqli_query($koneksi, $sql_data_siswa);
     while($data_siswa = mysqli_fetch_assoc($query_utama)){
         $id_sekolah = $data_siswa['id'];
@@ -18,12 +17,14 @@
     }
  ?>
 
-<table class="table table-bordered mb-3">
-    <tbody>  
+<table class="table table-striped table-bordered mb-3">
+    <thead>
         <tr>
             <td colspan="2"><i class="fas fa-user-circle"></i>  
             <strong>Data Sekolah Siswa<strong></td>
-        </tr>              
+        </tr> 
+    </thead>
+    <tbody>               
         <tr>
             <th width="45%" scope="row">SKHUN</th>
             <td><?= !empty($skhun) ? $skhun : "--"; ?></td>

@@ -18,7 +18,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h3><i class="fas fa-user-tie"></i> Profil</h3>
+            <h3><i class="fas fa-user-tie"></i> Admin</h3>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -34,7 +34,7 @@
             <div class="card">
               <div class="card-header">
                 <div class="card-tools">
-                  <a href="index.php?include=edit-profil" class="btn btn-sm btn-info float-right"><i class="fas fa-edit"></i> Edit Profil</a>
+                  <a href="edit-profil" class="btn btn-sm btn-info float-right"><i class="fas fa-edit"></i> Edit Profil</a>
                 </div>
               </div>
               <!-- /.card-header -->

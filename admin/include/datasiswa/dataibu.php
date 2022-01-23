@@ -1,71 +1,69 @@
 <?php
-$sql_data_siswa = "SELECT * FROM `data-ibu` WHERE `nis`=$data";
-$query = mysqli_query($koneksi, $sql_data_siswa);
-while ($data_siswa = mysqli_fetch_assoc($query)) {
-    $id = $data_siswa['id'];
-    $nis = $data_siswa['nis'];
-    $nama = $data_siswa['nama_ibu'];
-    $tempat_lahir = $data_siswa['tempat_lahir_ibu'];
-    $tanggal_lahir = $data_siswa['tanggal_lahir_ibu'];
-    $nohp = $data_siswa['nohp_ibu'];
-    $pendidikan = $data_siswa['pendidikan_ibu'];
-    $pekerjaan = $data_siswa['pekerjaan_ibu'];
-    $penghasilan = $data_siswa['penghasilan_ibu'];
-    $agama = $data_siswa['agama_ibu'];
-    $status = $data_siswa['status_ibu'];
-    $alamat = $data_siswa['alamat_ibu'];
+    $sql_ibu = "SELECT * FROM `data-ibu` WHERE `nis`=$data";
+    $query_ibu = mysqli_query($koneksi, $sql_ibu);
+
+while ($data_ibu = mysqli_fetch_assoc($query_ibu)) {
+    $id = $data_ibu['id'];
+    $nama_ibu = $data_ibu['nama_ibu'];
+    $tempat_lahir_ibu = $data_ibu['tempat_lahir_ibu'];
+    $tanggal_lahir_ibu = $data_ibu['tanggal_lahir_ibu'];
+    $nohp_ibu = $data_ibu['nohp_ibu'];
+    $pendidikan_ibu = $data_ibu['pendidikan_ibu'];
+    $pekerjaan_ibu = $data_ibu['pekerjaan_ibu'];
+    $penghasilan_ibu = $data_ibu['penghasilan_ibu'];
+    $agama_ibu = $data_ibu['agama_ibu'];
+    $status_ibu = $data_ibu['status_ibu'];
+    $alamat_ibu = $data_ibu['alamat_ibu'];
 }
 ?>
 
-<table class="table table-bordered">
-    <tbody>  
+<table class="table table-striped table-bordered mb-3">
+    <thead>
         <tr>
             <td colspan="2"><i class="fas fa-user-circle"></i>  
-            <strong>Data Ibu Siswa<strong></td>
-        </tr>              
+            <strong>Data ibu Siswa<strong></td>
+        </tr> 
+    </thead>
+    <tbody>             
         <tr>
             <th width="45%" scope="row">Nama</th>
-            <td><?= !empty($nama) ? $nama : "--"; ?></td>
-        </tr>
-        <tr>
-            <th scope="row">NIS</th>
-            <td><?= !empty($nis) ? $nis : "--"; ?></td>
+            <td><?= !empty($nama_ibu) ? $nama_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Tempat Lahir</th>
-            <td><?= !empty($tempat_lahir) ? $tempat_lahir : "--"; ?></td>
+            <td><?= !empty($tempat_lahir_ibu) ? $tempat_lahir_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Tanggal Lahir</th>
-            <td><?= !empty($tanggal_lahir) ? $tanggal_lahir : "--"; ?></td>
+            <td><?= !empty($tanggal_lahir_ibu) ? $tanggal_lahir_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">No Hp</th>
-            <td><?= !empty($nohp) ? $nohp : "--"; ?></td>
+            <td><?= !empty($nohp_ibu) ? $nohp_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Pendidikan</th>
-            <td><?= !empty($pendidikan) ? $pendidikan : "--"; ?></td>
+            <td><?= !empty($pendidikan_ibu) ? $pendidikan_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Pekerjaan</th>
-            <td><?= !empty($pekerjaan) ? $pekerjaan : "--"; ?></td>
+            <td><?= !empty($pekerjaan_ibu) ? $pekerjaan_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Penghasilan</th>
-            <td><?= !empty($penghasilan) ? $penghasilan : "--"; ?></td>
+            <td><?= !empty($penghasilan_ibu) ? $penghasilan_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Agama</th>
-            <td><?= !empty($agama) ? $agama : "--"; ?></td>
+            <td><?= !empty($agama_ibu) ? $agama_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Status</th>
-            <td><?= !empty($status) ? $status : "--"; ?></td>
+            <td><?= !empty($status_ibu) ? $status_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Alamat</th>
-            <td><?= !empty($alamat) ? $alamat : "--"; ?></td>
+            <td><?= !empty($alamat_ibu) ? $alamat_ibu : "--"; ?></td>
         </tr>
     </tbody>
 </table>

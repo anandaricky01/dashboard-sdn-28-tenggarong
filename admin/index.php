@@ -145,7 +145,6 @@ if(isset($_GET["include"])){
                     include("include/editprofil.php");
                 }
                 else{
-                    echo $_SESSION['level'];
                     include("include/profil.php");
                 }  
             ?>

@@ -44,20 +44,18 @@ while ($data = mysqli_fetch_assoc($query)) {
 ?>
 
 
-<table class="table table-bordered mb-3">
+<table class="table table-striped table-bordered mb-3">
     <div class="col">
-        <tbody class="col">  
+        <thead>
             <tr>
                 <td colspan="2"><i class="fas fa-user-circle"></i>  
                 <strong>Data Diri Siswa<strong></td>
             </tr>
+        </thead>
+        <tbody class="col">  
             <tr>
                 <th width="45%" scope="row">NIK</th>
                 <td><?= !empty($nik) ? $nik : "--"; ?></td>
-            </tr>
-            <tr>
-                <th scope="row">NIS</th>
-                <td><?= !empty($nis) ? $nis : "--"; ?></td>
             </tr>
             <tr>
                 <th scope="row">Tempat Lahir</th>
