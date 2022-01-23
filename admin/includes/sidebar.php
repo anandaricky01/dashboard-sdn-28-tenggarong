@@ -30,16 +30,16 @@
       </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="kategori-kegiatan" 
+          <a href="data-siswa" 
           class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Kategori Kegiatan</p>
+            <p>Data Siswa</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="departemen" class="nav-link">
+          <a href="data-guru" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Departemen</p>
+            <p>Data Guru</p>
           </a>
         </li>
         <li class="nav-item">
@@ -49,22 +49,6 @@
           </a>
         </li>
       </ul>
-    </li>
-    <li class="nav-item">
-      <a href="proker" class="nav-link">
-        <i class="nav-icon fas fa-book"></i>
-        <p>
-          Program Kerja
-        </p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="kegiatan" class="nav-link">
-        <i class="nav-icon fab fa-blogger"></i>
-        <p>
-          Kegiatan
-        </p>
-      </a>
     </li>
     <?php 
     if ($_SESSION['level']=="1"){?>

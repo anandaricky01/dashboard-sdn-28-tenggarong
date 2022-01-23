@@ -25,7 +25,7 @@ while ($data_siswa = mysqli_fetch_assoc($query_utama)) {
                 <td><?= $nama; ?></td>
             </tr>
             <tr>
-                <th scope="row">NIS</th>
+                <th scope="row">NIPD</th>
                 <td><?= $nis; ?></td>
             </tr>
             <tr>
