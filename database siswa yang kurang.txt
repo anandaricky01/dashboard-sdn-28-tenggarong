@@ -12,6 +12,7 @@ Data diri
 - telepon --
 - HP -- 
 - E-Mail --
+- Nomor KKS (Kartu Keluarga Sejahtera) (Jika Punya) 
 - No Registrasi Akta Lahir --
 - Bank --
 - Nomor Rekening Bank --
@@ -23,15 +24,14 @@ Data diri
 
 
 Data sekolah siswa 
-- SKHUN
-- Penerima KPS (Kartu Perlindungan Sosial)
-- No. KPS
-- No Peserta Ujian Nasional
-- No Seri Ijazah
-- Penerima KIP (ex: Tidak)
-- Nomor KIP
-- Nama di KIP
-- Nomor KKS (Kartu Keluarga Sejahtera) (Jika Punya)
+- SKHUN -- 
+- Penerima KPS (Kartu Perlindungan Sosial) -- 
+- No. KPS -- 
+- No Peserta Ujian Nasional -- 
+- No Seri Ijazah --
+- Penerima KIP (ex: Tidak) --
+- Nomor KIP --
+- Nama di KIP --
 - Layak PIP (Program Indonesia Pintar) (usulan dari sekolah) (ex: Ya/Tidak)
 - Alasan Layak PIP
 
