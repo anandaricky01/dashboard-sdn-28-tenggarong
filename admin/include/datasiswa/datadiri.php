@@ -1,45 +1,45 @@
 <?php
-$sql_data = "SELECT * FROM `data-diri-siswa` WHERE `nis`=$data";
-$query = mysqli_query($koneksi, $sql_data);
+$sql_data_diri = "SELECT * FROM `data-diri-siswa` WHERE `nis`=$data";
+$query_diri = mysqli_query($koneksi, $sql_data_diri);
 
-while ($data = mysqli_fetch_assoc($query)) {
-    $id = $data['id'];
-    $nis = $data['nis'];
-    $nik = $data['nik'];
-    $tempat_lahir = $data['tempat_lahir'];
-    $tanggal_lahir = $data['tanggal_lahir'];
-    $agama = $data['agama'];
-    $kewarganegaraan = $data['kewarganegaraan'];
-    $anak_ke = $data['anak_ke'];
-    $jumlah_saudara = $data['jumlah_saudara'];
-    $jalan = $data['jalan'];
-    $dusun = $data['dusun'];
-    $rt = $data['rt'];
-    $rw = $data['rw'];
-    $kodepos = $data['kodepos'];
-    $kelurahan = $data['kelurahan'];
-    $kecamatan = $data['kecamatan'];
-    $kota_kab = $data['kota_kab'];
-    $provinsi = $data['provinsi'];
-    $no_kk = $data['no_kk'];
-    $no_kks = $data['no_kks'];
-    $jarak_ke_sekolah = $data['jarak_ke_sekolah'];
-    $jenis_tinggal = $data['jenis_tinggal'];
-    $transportasi = $data['transportasi'];
-    $telepon = $data['telepon'];
-    $no_hp = $data['no_hp'];
-    $email = $data['email'];
-    $no_registrasi_akta = $data['no_registrasi_akta'];
-    $bank = $data['bank'];
-    $no_rekening_bank = $data['no_rekening_bank'];
-    $rekening_atas_nama = $data['rekening_atas_nama'];
-    $kebutuhan_khusus = $data['kebutuhan_khusus'];
-    $sekolah_asal = $data['sekolah_asal'];
-    $lintang = $data['lintang'];
-    $bujur = $data['bujur'];
-    $berat_badan = $data['berat_badan'];
-    $tinggi_badan = $data['tinggi_badan'];
-    $lingkar_kepala = $data['lingkar_kepala'];
+while ($data_diri = mysqli_fetch_assoc($query_diri)) {
+    $id = $data_diri['id'];
+    $nis = $data_diri['nis'];
+    $nik = $data_diri['nik'];
+    $tempat_lahir = $data_diri['tempat_lahir'];
+    $tanggal_lahir = $data_diri['tanggal_lahir'];
+    $agama = $data_diri['agama'];
+    $kewarganegaraan = $data_diri['kewarganegaraan'];
+    $anak_ke = $data_diri['anak_ke'];
+    $jumlah_saudara = $data_diri['jumlah_saudara'];
+    $jalan = $data_diri['jalan'];
+    $dusun = $data_diri['dusun'];
+    $rt = $data_diri['rt'];
+    $rw = $data_diri['rw'];
+    $kodepos = $data_diri['kodepos'];
+    $kelurahan = $data_diri['kelurahan'];
+    $kecamatan = $data_diri['kecamatan'];
+    $kota_kab = $data_diri['kota_kab'];
+    $provinsi = $data_diri['provinsi'];
+    $no_kk = $data_diri['no_kk'];
+    $no_kks = $data_diri['no_kks'];
+    $jarak_ke_sekolah = $data_diri['jarak_ke_sekolah'];
+    $jenis_tinggal = $data_diri['jenis_tinggal'];
+    $transportasi = $data_diri['transportasi'];
+    $telepon = $data_diri['telepon'];
+    $no_hp = $data_diri['no_hp'];
+    $email = $data_diri['email'];
+    $no_registrasi_akta = $data_diri['no_registrasi_akta'];
+    $bank = $data_diri['bank'];
+    $no_rekening_bank = $data_diri['no_rekening_bank'];
+    $rekening_atas_nama = $data_diri['rekening_atas_nama'];
+    $kebutuhan_khusus = $data_diri['kebutuhan_khusus'];
+    $sekolah_asal = $data_diri['sekolah_asal'];
+    $lintang = $data_diri['lintang'];
+    $bujur = $data_diri['bujur'];
+    $berat_badan = $data_diri['berat_badan'];
+    $tinggi_badan = $data_diri['tinggi_badan'];
+    $lingkar_kepala = $data_diri['lingkar_kepala'];
 }
 ?>
 

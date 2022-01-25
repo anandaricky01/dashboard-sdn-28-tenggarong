@@ -2,9 +2,12 @@
 
   if((isset($_GET['aksi']))&&(isset($_GET['data']))){
     if($_GET['aksi']=='hapus'){
-      $id = $_GET['data'];
+      $nis = $_GET['data'];
       //hapus Kategori Kegiatan
-      $sql_dh = "DELETE FROM `data-utama-siswa` WHERE `id` = '$id'";
+      $sql_dh = "DELETE FROM `data-utama-siswa` WHERE `nis` = '$nis'";
+      mysqli_query($koneksi,$sql_dh);
+
+      $sql_dh = "DELETE FROM `data-sekolah-siswa` WHERE `nis` = '$nis'";
       mysqli_query($koneksi,$sql_dh);
     }
   }
