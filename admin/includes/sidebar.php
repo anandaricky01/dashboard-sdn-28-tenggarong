@@ -43,9 +43,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="galeri" class="nav-link">
+          <a href="foto-siswa" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>Galeri</p>
+            <p>Foto Siswa</p>
           </a>
         </li>
       </ul>

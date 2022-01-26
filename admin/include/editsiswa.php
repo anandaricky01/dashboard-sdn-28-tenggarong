@@ -69,6 +69,60 @@
       $tinggi_badan = $data_diri['tinggi_badan'];
       $lingkar_kepala = $data_diri['lingkar_kepala'];
     }
+
+    $sql_ayah = "SELECT * FROM `data-ayah` WHERE `nis`=$nis";
+    $query_ayah = mysqli_query($koneksi, $sql_ayah);
+
+    while ($data_ayah = mysqli_fetch_assoc($query_ayah)) {
+        $id = $data_ayah['id'];
+        $nik_ayah = $data_ayah['nik_ayah'];
+        $nama_ayah = $data_ayah['nama_ayah'];
+        $tempat_lahir_ayah = $data_ayah['tempat_lahir_ayah'];
+        $tanggal_lahir_ayah = $data_ayah['tanggal_lahir_ayah'];
+        $nohp_ayah = $data_ayah['nohp_ayah'];
+        $pendidikan_ayah = $data_ayah['pendidikan_ayah'];
+        $pekerjaan_ayah = $data_ayah['pekerjaan_ayah'];
+        $penghasilan_ayah = $data_ayah['penghasilan_ayah'];
+        $agama_ayah = $data_ayah['agama_ayah'];
+        $status_ayah = $data_ayah['status_ayah'];
+        $alamat_ayah = $data_ayah['alamat_ayah'];
+    }
+
+    $sql_ibu = "SELECT * FROM `data-ibu` WHERE `nis`=$nis";
+    $query_ibu = mysqli_query($koneksi, $sql_ibu);
+
+    while ($data_ibu = mysqli_fetch_assoc($query_ibu)) {
+        $id = $data_ibu['id'];
+        $nik_ibu = $data_ibu['nik_ibu'];
+        $nama_ibu = $data_ibu['nama_ibu'];
+        $tempat_lahir_ibu = $data_ibu['tempat_lahir_ibu'];
+        $tanggal_lahir_ibu = $data_ibu['tanggal_lahir_ibu'];
+        $nohp_ibu = $data_ibu['nohp_ibu'];
+        $pendidikan_ibu = $data_ibu['pendidikan_ibu'];
+        $pekerjaan_ibu = $data_ibu['pekerjaan_ibu'];
+        $penghasilan_ibu = $data_ibu['penghasilan_ibu'];
+        $agama_ibu = $data_ibu['agama_ibu'];
+        $status_ibu = $data_ibu['status_ibu'];
+        $alamat_ibu = $data_ibu['alamat_ibu'];
+    }
+
+    $sql_wali = "SELECT * FROM `data-wali` WHERE `nis`=$nis";
+    $query_wali = mysqli_query($koneksi, $sql_wali);
+
+    while ($data_wali = mysqli_fetch_assoc($query_wali)) {
+        $id = $data_wali['id'];
+        $nik_wali = $data_wali['nik_wali'];
+        $nama_wali = $data_wali['nama_wali'];
+        $tempat_lahir_wali = $data_wali['tempat_lahir_wali'];
+        $tanggal_lahir_wali = $data_wali['tanggal_lahir_wali'];
+        $nohp_wali = $data_wali['nohp_wali'];
+        $pendidikan_wali = $data_wali['pendidikan_wali'];
+        $pekerjaan_wali = $data_wali['pekerjaan_wali'];
+        $penghasilan_wali = $data_wali['penghasilan_wali'];
+        $agama_wali = $data_wali['agama_wali'];
+        $status_wali = $data_wali['status_wali'];
+        $alamat_wali = $data_wali['alamat_wali'];
+    }
   }
 ?>
 
@@ -113,6 +167,14 @@
 
           <!-- data utama -->
             <div class="card-body">
+
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <div class="alert alert-primary text-center" role="alert">
+                    Mengedit Foto Siswa dilakukan pada menu galeri!
+                  </div>
+                </div>
+              </div>
 
               <div class="form-group">
                 <h3><strong>Data Utama Siswa</strong></h3>
@@ -347,7 +409,7 @@
                   Tanggal Lahir
                 </label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" id="tanggal_lahir" Name="tanggal_lahir" value="<?= !empty($tanggal_lahir) ? $tanggal_lahir : "";?>" >
+                  <input type="text"  name="tanggal_lahir"  class="form-control datepicker"  />
                 </div>
               </div>
 
@@ -604,6 +666,345 @@
 
             </div>
           <!-- tutup data diri -->
+
+          <!-- Data Ayah -->
+            <div class="card-body">
+
+              <div class="form-group">
+                <h3><strong>Data Ayah Siswa</strong></h3>
+              </div>
+
+              <div class="form-group row">
+                <label for="nama" class="col-sm-3 col-form-label">
+                  Nama
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nama_ayah" value="<?= !empty($nama_ayah) ? $nama_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="nik_ayah" class="col-sm-3 col-form-label">
+                  NIK
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nik_ayah" value="<?= !empty($nik_ayah) ? $nik_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="tempat_lahir_ayah" class="col-sm-3 col-form-label">
+                  Tempat Lahir
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="tempat_lahir_ayah" value="<?= !empty($tempat_lahir_ayah) ? $tempat_lahir_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="tanggal_lahir_ayah" class="col-sm-3 col-form-label">
+                  Tanggal Lahir
+                </label>
+                <div class="col-sm-7">
+                  <input type="text"  name="tanggal_lahir_ayah"  class="form-control datepicker"  value="<?= !empty($tanggal_lahir_ayah) ? $tanggal_lahir_ayah : "";?>" />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="nohp_ayah" class="col-sm-3 col-form-label">
+                  No. Handphone
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nohp_ayah" value="<?= !empty($nohp_ayah) ? $nohp_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="pendidikan_ayah" class="col-sm-3 col-form-label">
+                  Pendidikan Terakhir
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="pendidikan_ayah" value="<?= !empty($pendidikan_ayah) ? $pendidikan_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="pekerjaan_ayah" class="col-sm-3 col-form-label">
+                  Pekerjaan
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="pekerjaan_ayah" value="<?= !empty($pekerjaan_ayah) ? $pekerjaan_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="penghasilan_ayah" class="col-sm-3 col-form-label">
+                  Penghasilan
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="penghasilan_ayah" value="<?= !empty($penghasilan_ayah) ? $penghasilan_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="agama_ayah" class="col-sm-3 col-form-label">
+                  Agama
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="agama_ayah" value="<?= !empty($agama_ayah) ? $agama_ayah : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="status_ayah" class="col-sm-3 col-form-label">
+                  Status
+                </label>
+                <div class="col-sm-7">
+                  <select class="form-control" id="kategori" name="status_ayah">
+                    <option value="">- Pilih -</option>
+                    <option value="Masih Hidup ">Masih Hidup </option>
+                    <option value="Meninggal">Meninggal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="alamat_ayah" class="col-sm-3 col-form-label">
+                  Alamat
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="alamat_ayah" value="<?= !empty($alamat_ayah) ? $alamat_ayah : "";?>">
+                </div>
+              </div>
+
+            </div>
+          <!-- tutup data ayah -->
+
+          <!-- Data Ibu -->
+            <div class="card-body">
+
+              <div class="form-group">
+                <h3><strong>Data Ibu Siswa</strong></h3>
+              </div>
+
+              <div class="form-group row">
+                <label for="nama" class="col-sm-3 col-form-label">
+                  Nama
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nama_ibu" value="<?= !empty($nama_ibu) ? $nama_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="nik_ibu" class="col-sm-3 col-form-label">
+                  NIK
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nik_ibu" value="<?= !empty($nik_ibu) ? $nik_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="tempat_lahir_ibu" class="col-sm-3 col-form-label">
+                  Tempat Lahir
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="tempat_lahir_ibu" value="<?= !empty($tempat_lahir_ibu) ? $tempat_lahir_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="tanggal_lahir_ibu" class="col-sm-3 col-form-label">
+                  Tanggal Lahir
+                </label>
+                <div class="col-sm-7">
+                  <input type="text"  name="tanggal_lahir_ibu"  class="form-control datepicker"  value="<?= !empty($tanggal_lahir_ibu) ? $tanggal_lahir_ibu : "";?>" />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="nohp_ibu" class="col-sm-3 col-form-label">
+                  No. Handphone
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nohp_ibu" value="<?= !empty($nohp_ibu) ? $nohp_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="pendidikan_ibu" class="col-sm-3 col-form-label">
+                  Pendidikan Terakhir
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="pendidikan_ibu" value="<?= !empty($pendidikan_ibu) ? $pendidikan_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="pekerjaan_ibu" class="col-sm-3 col-form-label">
+                  Pekerjaan
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="pekerjaan_ibu" value="<?= !empty($pekerjaan_ibu) ? $pekerjaan_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="penghasilan_ibu" class="col-sm-3 col-form-label">
+                  Penghasilan
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="penghasilan_ibu" value="<?= !empty($penghasilan_ibu) ? $penghasilan_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="agama_ibu" class="col-sm-3 col-form-label">
+                  Agama
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="agama_ibu" value="<?= !empty($agama_ibu) ? $agama_ibu : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="status_ibu" class="col-sm-3 col-form-label">
+                  Status
+                </label>
+                <div class="col-sm-7">
+                  <select class="form-control" id="kategori" name="status_ibu">
+                    <option value="">- Pilih -</option>
+                    <option value="Masih Hidup ">Masih Hidup </option>
+                    <option value="Meninggal">Meninggal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="alamat_ibu" class="col-sm-3 col-form-label">
+                  Alamat
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="alamat_ibu" value="<?= !empty($alamat_ibu) ? $alamat_ibu : "";?>">
+                </div>
+              </div>
+
+            </div>
+          <!-- tutup data ibu -->
+
+          <!-- Data Wali -->
+            <div class="card-body">
+
+              <div class="form-group">
+                <h3><strong>Data Wali Siswa</strong></h3>
+              </div>
+
+              <div class="form-group row">
+                <label for="nama" class="col-sm-3 col-form-label">
+                  Nama
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nama_wali" value="<?= !empty($nama_wali) ? $nama_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="nik_wali" class="col-sm-3 col-form-label">
+                  NIK
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nik_wali" value="<?= !empty($nik_wali) ? $nik_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="tempat_lahir_wali" class="col-sm-3 col-form-label">
+                  Tempat Lahir
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="tempat_lahir_wali" value="<?= !empty($tempat_lahir_wali) ? $tempat_lahir_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="tanggal_lahir_wali" class="col-sm-3 col-form-label">
+                  Tanggal Lahir
+                </label>
+                <div class="col-sm-7">
+                  <input type="text"  name="tanggal_lahir_wali"  class="form-control datepicker"  value="<?= !empty($tanggal_lahir_wali) ? $tanggal_lahir_wali : "";?>" />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="nohp_wali" class="col-sm-3 col-form-label">
+                  No. Handphone
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="nohp_wali" value="<?= !empty($nohp_wali) ? $nohp_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="pendidikan_wali" class="col-sm-3 col-form-label">
+                  Pendidikan Terakhir
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="pendidikan_wali" value="<?= !empty($pendidikan_wali) ? $pendidikan_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="pekerjaan_wali" class="col-sm-3 col-form-label">
+                  Pekerjaan
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="pekerjaan_wali" value="<?= !empty($pekerjaan_wali) ? $pekerjaan_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="penghasilan_wali" class="col-sm-3 col-form-label">
+                  Penghasilan
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="penghasilan_wali" value="<?= !empty($penghasilan_wali) ? $penghasilan_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="agama_wali" class="col-sm-3 col-form-label">
+                  Agama
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="agama_wali" value="<?= !empty($agama_wali) ? $agama_wali : "";?>">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="status_wali" class="col-sm-3 col-form-label">
+                  Status
+                </label>
+                <div class="col-sm-7">
+                  <select class="form-control" id="kategori" name="status_wali">
+                    <option value="">- Pilih -</option>
+                    <option value="Masih Hidup ">Masih Hidup </option>
+                    <option value="Meninggal">Meninggal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="alamat_wali" class="col-sm-3 col-form-label">
+                  Alamat
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="nama" Name="alamat_wali" value="<?= !empty($alamat_wali) ? $alamat_wali : "";?>">
+                </div>
+              </div>
+
+            </div>
+          <!-- tutup data wali -->
 
           <!-- /.card-body -->
           <!-- submit -->

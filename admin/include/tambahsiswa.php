@@ -3,7 +3,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h3><i class="fas fa-plus"></i> Tambah Siswa</h3>
+            <h3><i class="fas fa-plus"></i> Tambah Siswa - Data Utama</h3>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -20,7 +20,7 @@
 
     <div class="card card-info">
       <div class="card-header">
-        <h3 class="card-title"style="margin-top:5px;"><i class="far fa-list-alt"></i> Form Tambah Siswa</h3>
+        <h3 class="card-title"style="margin-top:5px;"><i class="far fa-list-alt"></i> Form Tambah Siswa - Data Utama</h3>
         <div class="card-tools">
           <a href="data-siswa" class="btn btn-sm btn-warning float-right"><i class="fas fa-arrow-alt-circle-left"></i> Kembali</a>
         </div>
@@ -36,9 +36,17 @@
             <?php }?>
           <?php }?>
       </div>
-      <form class="form-horizontal" method="post" action="konfirmasi-tambah-data-siswa">
+      <form class="form-horizontal" method="post" action="konfirmasi-tambah-data-siswa" enctype="multipart/form-data">
 
         <div class="card-body">
+
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <div class="alert alert-primary text-center" role="alert">
+                Mengunggah Foto siswa dilakukan setelah membuat data utama siswa dan diunggah pada menu Galeri!
+              </div>
+            </div>
+          </div>
 
           <div class="form-group row">
             <label for="nama" class="col-sm-3 col-form-label">Nama</label>
@@ -87,17 +95,6 @@
               </select>
             </div>
           </div>
-
-          <div class="form-group row">
-            <label for="foto" class="col-sm-3 col-form-label">Foto Kelas 1</label>
-            <div class="col-sm-7">
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" name="foto-1" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-              </div>  
-            </div>
-          </div>
-          
 
         </div>
         <!-- /.card-body -->

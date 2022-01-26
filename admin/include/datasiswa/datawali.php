@@ -51,7 +51,7 @@ while ($data_wali = mysqli_fetch_assoc($query_wali)) {
         </tr>
         <tr>
             <th scope="row">Penghasilan</th>
-            <td><?= !empty($penghasilan_wali) ? $penghasilan_wali : "--"; ?></td>
+            <td><?= !empty($penghasilan_wali) ? convert_to_rupiah($penghasilan_wali) : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Agama</th>

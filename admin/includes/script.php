@@ -30,13 +30,12 @@
 </script>
 <!-- bootstrap datepicker -->
 <script src="datepicker/js/bootstrap-datepicker.js"></script>
-<script>
-  //Date picker
-  $('#datepicker-year').datepicker({
-		format: "yyyy",
-		orientation: "top auto",
-    viewMode: "years", 
-    minViewMode: "years",
-    autoclose: true
-  });
-</script>
+ <script type="text/javascript">
+        $(function(){
+            $(".datepicker").datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                todayHighlight: true,
+            });
+        });
+    </script>

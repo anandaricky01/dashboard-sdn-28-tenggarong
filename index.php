@@ -1,6 +1,7 @@
 <?php 
 
   include('koneksi/koneksi.php');
+  include('includes/function.php');
   session_start();
  ?>
 

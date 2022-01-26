@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include("includes/function.php");
     include("../koneksi/koneksi.php");
     if(isset($_GET["include"])){
       $include = $_GET["include"];
@@ -19,10 +20,10 @@
         include("include/konfirmasieditguru.php");
       } 
       // kategori galeri
-      else if($include=="konfirmasi-tambah-galeri"){
-        include("include/konfirmasitambahgaleri.php");
-      }else if($include=="konfirmasi-edit-galeri"){
-        include("include/konfirmasieditgaleri.php");
+      else if($include=="konfirmasi-tambah-foto-siswa"){
+        include("include/konfirmasitambahfotosiswa.php");
+      }else if($include=="konfirmasi-edit-foto-siswa"){
+        include("include/konfirmasieditfotosiswa.php");
       }
       // pengaturan user
       else if($include=="konfirmasi-tambah-user"){
@@ -81,14 +82,14 @@ if(isset($_GET["include"])){
                 }
               
                 // galeri
-                else if($include=="galeri"){
-                    include("include/galeri.php");
-                }else if($include=="tambah-galeri"){
-                    include("include/tambahgaleri.php");
-                }else if($include=="edit-galeri"){
-                    include("include/editgaleri.php");
-                }else if($include=="detail-galeri"){
-                    include("include/detailgaleri.php");
+                else if($include=="foto-siswa"){
+                    include("include/fotosiswa.php");
+                }else if($include=="tambah-foto-siswa"){
+                    include("include/tambahfotosiswa.php");
+                }else if($include=="edit-foto-siswa"){
+                    include("include/editfotosiswa.php");
+                }else if($include=="detail-foto-siswa"){
+                    include("include/detailfotosiswa.php");
                 }
             // akhir data master
 
@@ -177,6 +178,7 @@ if(isset($_GET["include"])){
         </div>
         <!-- /.content-wrapper -->
         <?php include("includes/footer.php") ?>
+
       </div>
       <!-- ./wrapper -->
       <?php include("includes/script.php") ?>
@@ -189,5 +191,6 @@ if(isset($_GET["include"])){
 }
 ?>
 
+    
 
 </html>
