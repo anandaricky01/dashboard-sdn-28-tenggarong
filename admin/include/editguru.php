@@ -1,7 +1,7 @@
 <?php 
   if(isset($_GET['data'])){
     $id = $_GET['data'];
-    $_SESSION['id']=$id;
+    $_SESSION['NO']=$id;
 
     $sql_d = "SELECT * FROM `data-guru` WHERE `NO` = '$id'";
     $query_d = mysqli_query($koneksi,$sql_d);
@@ -55,6 +55,7 @@
         $JAB_GURU_2 = $data_guru['JAB_GURU_2'];
         $NO_PSRT_4 = $data_guru['NO_PSRT_4'];
         $NO_SKTP_4 = $data_guru['NO_SKTP_4'];
+        $FOTO = $data_guru['FOTO'];
     }
   }
 ?>
@@ -92,7 +93,7 @@
           <?php if(!empty($_GET['notif'])){?>
              <?php if($_GET['notif']=="editkosong"){?>
                 <div class="alert alert-danger" role="alert">
-                Maaf data departemen wajib di isi</div>
+                Maaf data guru wajib di isi</div>
              <?php }?>
           <?php }?>
       </div>
@@ -101,31 +102,31 @@
           <div class="form-group row">
             <label for="nama" class="col-sm-3 col-form-label">Nama</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $nama ?>">
+              <input type="text" class="form-control" id="nama" name="NAMA" value="<?php echo $nama ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="nip" class="col-sm-3 col-form-label">Nip</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="nip" name="nip" value="<?php echo $nip ?>">
+              <input type="text" class="form-control" id="nip" name="NIP_BARU" value="<?php echo $nip ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="kode" class="col-sm-3 col-form-label">Kode Guru</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="kode" name="kode" value="<?php echo $kode ?>">
+              <input type="text" class="form-control" id="kode" name="KODE" value="<?php echo $kode ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="tugas_jabatan" class="col-sm-3 col-form-label">Tugas Jabatan</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="tugas_jabatan" name="tugas_jabatan" value="<?php echo $tugas_jabatan ?>">
+              <input type="text" class="form-control" id="tugas_jabatan" name="TUGAS_JABATAN" value="<?php echo $tugas_jabatan ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="jenis_kelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin" value="<?php echo $jenis_kelamin ?>">
+              <input type="text" class="form-control" id="jenis_kelamin" name="JK" value="<?php echo $jenis_kelamin ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -137,7 +138,7 @@
           <div class="form-group row">
             <label for="GELAR" class="col-sm-3 col-form-label">Gelar</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="GELAR" name="GELAR" value="<?php echo $GELAR_BLK ?>">
+              <input type="text" class="form-control" id="GELAR" name="GELAR_BLK" value="<?php echo $GELAR_BLK ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -149,7 +150,7 @@
           <div class="form-group row">
             <label for="NIP_LAMA" class="col-sm-3 col-form-label">NIP Lama</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="NIP_LAMA" name="NIP_LAMA" value="<?php echo $NIP_LAMA ?>">
+              <input type="text" class="form-control" id="NIP_LAMA" name="NIP" value="<?php echo $NIP_LAMA ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -179,7 +180,7 @@
           <div class="form-group row">
             <label for="TGLLAHIR" class="col-sm-3 col-form-label">Tanggal Lahir</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="TGLLAHIR" name="TGLLAHIR" value="<?php echo $TGLLAHIR ?>">
+              <input type="text" class="form-control datepicker" id="TGLLAHIR" name="TGLLAHIR" value="<?php echo $TGLLAHIR ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -203,25 +204,25 @@
           <div class="form-group row">
             <label for="Gol" class="col-sm-3 col-form-label">Gol</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="Gol" name="Gol" value="<?php echo $GOL ?>">
+              <input type="text" class="form-control" id="Gol" name="GOL" value="<?php echo $GOL ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="TMT_AWAL" class="col-sm-3 col-form-label">TMT Awal</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="TMT Awal" name="TMT_AWAL" value="<?php echo $TMT_AWAL ?>">
+              <input type="text" class="form-control datepicker" id="TMT Awal" name="TMT_AWAL" value="<?php echo $TMT_AWAL ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="CPNS_TMT" class="col-sm-3 col-form-label">CPNS TMT</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="CPNS_TMT" name="CPNS_TMT" value="<?php echo $CPNS_TMT ?>">
+              <input type="text" class="form-control datepicker" id="CPNS_TMT" name="CPNS_TMT" value="<?php echo $CPNS_TMT ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="PNS_TMT" class="col-sm-3 col-form-label">PNS TMT</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="PNS_TMT" name="PNS_TMT" value="<?php echo $PNS_TMT ?>">
+              <input type="text" class="form-control datepicker" id="PNS_TMT" name="PNS_TMT" value="<?php echo $PNS_TMT ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -245,13 +246,13 @@
           <div class="form-group row">
             <label for="TMT_AKHIR" class="col-sm-3 col-form-label">TMT Akhir</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="TMT_AKHIR" name="TMT_AKHIR" value="<?php echo $TMT_AKHIR ?>">
+              <input type="text" class="form-control datepicker" id="TMT_AKHIR" name="TMT_AKHIR" value="<?php echo $TMT_AKHIR ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="Pendidikan" class="col-sm-3 col-form-label">Pendidikan</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="Pendidikan" name="Pendidikan" value="<?php echo $PEND ?>">
+              <input type="text" class="form-control" id="Pendidikan" name="PEND" value="<?php echo $PEND ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -263,7 +264,7 @@
           <div class="form-group row">
             <label for="Jurusan" class="col-sm-3 col-form-label">Jurusan</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="Jurusan" name="Jurusan" value="<?php echo $JURUSAN ?>">
+              <input type="text" class="form-control" id="Jurusan" name="JURUSAN" value="<?php echo $JURUSAN ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -311,7 +312,7 @@
           <div class="form-group row">
             <label for="TMT_DSNI" class="col-sm-3 col-form-label">TMT Disini</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="TMT_DSNI" name="TMT_DSNI" value="<?php echo $TMT_DSNI ?>">
+              <input type="text" class="form-control datepicker" id="TMT_DSNI" name="TMT_DSNI" value="<?php echo $TMT_DSNI ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -329,7 +330,7 @@
           <div class="form-group row">
             <label for="TMT_PNS" class="col-sm-3 col-form-label">TMT PNS</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="TMT_PNS" name="TMT_PNS" value="<?php echo $TMT_PNS ?>">
+              <input type="text" class="form-control datepicker" id="TMT_PNS" name="TMT_PNS" value="<?php echo $TMT_PNS ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -342,6 +343,18 @@
             <label for="GOL_DRH" class="col-sm-3 col-form-label">Gol Darah</label>
             <div class="col-sm-7">
               <input type="text" class="form-control" id="GOL_DRH" name="GOL_DRH" value="<?php echo $GOL_DRH ?>">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="STATUS" class="col-sm-3 col-form-label">Status</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="STATUS" name="STATUS" value="<?php echo $STATUS ?>">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="HP" class="col-sm-3 col-form-label">NO HP</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="HP" name="HP" value="<?php echo $HP ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -372,6 +385,12 @@
             <label for="NO_SKTP_4" class="col-sm-3 col-form-label">NO SKTP 4</label>
             <div class="col-sm-7">
               <input type="text" class="form-control" id="NO_SKTP_4" name="NO_SKTP_4" value="<?php echo $NO_SKTP_4 ?>">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="FOTO" class="col-sm-3 col-form-label">FOTO</label>
+            <div class="col-sm-7 file-upload-wrapper" data-text="Select your file!">
+              <input type="file" class="file-upload-field" id="FOTO" name="FOTO" value="<?php echo $FOTO ?>">
             </div>
           </div>
           </div>

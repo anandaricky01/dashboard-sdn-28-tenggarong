@@ -32,7 +32,7 @@
           <?php if(!empty($_GET['notif'])){?>
             <?php if($_GET['notif']=="tambahkosong"){?>
             <div class="alert alert-danger" role="alert">
-            Maaf data departemen wajib di isi</div>
+            Maaf data guru wajib di isi</div>
             <?php }?>
           <?php }?>
       </div>
@@ -41,31 +41,31 @@
           <div class="form-group row">
             <label for="nama" class="col-sm-3 col-form-label">Nama</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="nama" name="nama">
+              <input type="text" class="form-control" id="nama" name="NAMA">
             </div>
           </div>
           <div class="form-group row">
-            <label for="nip" class="col-sm-3 col-form-label">Nip</label>
+            <label for="nip" class="col-sm-3 col-form-label">NIP</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="nip" name="nip">
+              <input type="text" class="form-control" id="nip" name="NIP_BARU">
             </div>
           </div>
           <div class="form-group row">
             <label for="kode" class="col-sm-3 col-form-label">Kode Guru</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="kode" name="kode">
+              <input type="text" class="form-control" id="kode" name="KODE">
             </div>
           </div>
           <div class="form-group row">
             <label for="tugas_jabatan" class="col-sm-3 col-form-label">Tugas Jabatan</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="tugas_jabatan" name="tugas_jabatan">
+              <input type="text" class="form-control" id="tugas_jabatan" name="TUGAS_JABATAN">
             </div>
           </div>
           <div class="form-group row">
             <label for="jenis_kelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+              <input type="text" class="form-control" id="jenis_kelamin" name="JK">
             </div>
           </div>
           <div class="form-group row">
@@ -77,7 +77,7 @@
           <div class="form-group row">
             <label for="GELAR" class="col-sm-3 col-form-label">Gelar</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="GELAR" name="GELAR">
+              <input type="text" class="form-control" id="GELAR" name="GELAR_BLK">
             </div>
           </div>
           <div class="form-group row">
@@ -89,7 +89,7 @@
           <div class="form-group row">
             <label for="NIP_LAMA" class="col-sm-3 col-form-label">NIP Lama</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="NIP_LAMA" name="NIP_LAMA">
+              <input type="text" class="form-control" id="NIP_LAMA" name="NIP">
             </div>
           </div>
           <div class="form-group row">
@@ -143,7 +143,7 @@
           <div class="form-group row">
             <label for="Gol" class="col-sm-3 col-form-label">Gol</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="Gol" name="Gol">
+              <input type="text" class="form-control" id="Gol" name="GOL">
             </div>
           </div>
           <div class="form-group row">
@@ -191,7 +191,7 @@
           <div class="form-group row">
             <label for="Pendidikan" class="col-sm-3 col-form-label">Pendidikan</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="Pendidikan" name="Pendidikan">
+              <input type="text" class="form-control" id="Pendidikan" name="PEND">
             </div>
           </div>
           <div class="form-group row">
@@ -203,7 +203,7 @@
           <div class="form-group row">
             <label for="Jurusan" class="col-sm-3 col-form-label">Jurusan</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="Jurusan" name="Jurusan">
+              <input type="text" class="form-control" id="Jurusan" name="JURUSAN">
             </div>
           </div>
           <div class="form-group row">
@@ -312,6 +312,12 @@
             <label for="NO_SKTP_4" class="col-sm-3 col-form-label">NO SKTP 4</label>
             <div class="col-sm-7">
               <input type="text" class="form-control" id="NO_SKTP_4" name="NO_SKTP_4">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="FOTO" class="col-sm-3 col-form-label">FOTO</label>
+            <div class="col-sm-7 file-upload-wrapper" data-text="Select your file!">
+              <input type="file" class="file-upload-field" id="FOTO" name="FOTO">
             </div>
           </div>
           </div>

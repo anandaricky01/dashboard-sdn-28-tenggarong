@@ -51,6 +51,7 @@
         $JAB_GURU_2 = $data['JAB_GURU_2'];
         $NO_PSRT_4 = $data['NO_PSRT_4'];
         $NO_SKTP_4 = $data['NO_SKTP_4'];
+        $FOTO = $data['FOTO'];
 
         
 ?>
@@ -64,7 +65,7 @@
         <div class="modal-body container">
             <div class="row">
                 <div class="col text-center">
-                    <img id="foto" class="img-thumbnail" src="img/img013.jpg" alt="" width="200px">
+                    <img id="foto" class="img-thumbnail mb-4" src="../foto/<?= !empty($FOTO) ? $FOTO : 'kosong.png'; ?>" alt="Foto Guru" width="300px">
                 </div>
                 <div class="col p-2">
                     <div class="container">

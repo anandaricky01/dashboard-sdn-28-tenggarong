@@ -1,16 +1,15 @@
 <?php 
-	$departemen = $_POST['departemen'];
-	$deskripsi = $_POST['deskripsi'];
-	$logo = $_POST['logo'];
-	$kepanjangan = $_POST['kepanjangan'];
-	if(empty($departemen)){
-		header("Location:edit-departemen&notif=tambahkosong");
-	}else if(empty($deskripsi)){
-		header("Location:edit-departemen&notif=tambahkosong");
+	$nip = $_POST['NIP_BARU'];
+	$kode = $_POST['KODE'];
+	$nama = $_POST['NAMA'];
+	$jenis_kelamin = $_POST['JK'];
+	$tugas_jabatan = $_POST['TUGAS_JABATAN'];
+	if(empty($nama)||empty($nip)||empty($kode)||empty($tugas_jabatan)){
+		header("Location:tambah-data-guru&notif=tambahkosong");
 	}else{
-		$sql = "INSERT INTO `departemen` (`id_departemen`,`departemen`,`deskripsi`,`kepanjangan`,`logo`) 
-		values (NULL,'$departemen','$deskripsi','$kepanjangan','$logo')";
+		$sql = "INSERT INTO `data-guru` (`NO`,`NAMA`,`NIP_BARU`,`KODE`,`TUGAS_JABATAN`,`JK`) 
+		values (NULL,'$nama','$nip','$kode','$tugas_jabatan','$jenis_kelamin')";
 		mysqli_query($koneksi,$sql);
-	header("Location:departemen&notif=tambahberhasil");	
+	header("Location:data-guru&notif=tambahberhasil");	
 	}
 ?>

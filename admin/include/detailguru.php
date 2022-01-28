@@ -53,6 +53,7 @@
     $JAB_GURU_2 = $data_guru['JAB_GURU_2'];
     $NO_PSRT_4 = $data_guru['NO_PSRT_4'];
     $NO_SKTP_4 = $data_guru['NO_SKTP_4'];
+    $FOTO = $data_guru['FOTO'];
   }
 
 ?>
@@ -91,35 +92,54 @@
                       <?php }?>
                     <?php }?>
                 </div>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="text-center">
+                            <img id="foto" class="img-thumbnail mb-4" src="../foto/<?= !empty($FOTO) ? $FOTO : 'kosong.png'; ?>" alt="Foto Guru" width="300px">
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <table class="table table-striped table-bordered mb-3">
+                            <thead>
+                                <tr>
+                                    <td colspan="2"><i class="fas fa-user-circle"></i>  
+                                    <strong> Data Guru<strong></td>
+                                </tr>
+                            </thead>
+                            <tbody>   
+                                <tr>
+                                    <th width="45%" scope="row">Nama</th>
+                                    <td><?= $nama; ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Nama</th>
+                                    <td><?=$nama; ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">NIP</th>
+                                    <td><?= $nip; ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Kode Guru</th>
+                                    <td><?= $kode; ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tugas Jabatan</th>
+                                    <td><?= $tugas_jabatan; ?></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Jenis Kelamin</th>
+                                    <td><?= $jenis_kelamin; ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                <table class="table table-bordered">
-                  <tbody>  
+                <table class="table table-striped table-bordered mb-3">
+                  <tbody>               
                       <tr>
-                         <td colspan="2"><i class="fas fa-user-circle"></i>  
-                          <strong>Data Guru<strong></td>
-                      </tr>              
-                      <tr>
-                          <th scope="row">Nama</th>
-                          <td><?=$nama; ?></td>
-                      </tr>
-                      <tr>
-                          <th scope="row">NIP</th>
-                          <td><?= $nip; ?></td>
-                      </tr>
-                      <tr>
-                          <th scope="row">Kode Guru</th>
-                          <td><?= $kode; ?></td>
-                      </tr>
-                      <tr>
-                          <th scope="row">Tugas Jabatan</th>
-                          <td><?= $tugas_jabatan; ?></td>
-                      </tr>
-                      <tr>
-                          <th scope="row">Jenis Kelamin</th>
-                          <td><?= $jenis_kelamin; ?></td>
-                      </tr>
-                      <tr>
-                          <th scope="row">Nama Saja</th>
+                          <th width="45%" scope="row">Nama Saja</th>
                           <td><?=$NAMA_SAJA; ?></td>
                       </tr>
                       <tr>
