@@ -1,4 +1,4 @@
-<?php 
+<?php
 $sql_data_siswa = "SELECT * FROM `data-utama-siswa`  WHERE `nis`=$data";
 $query_utama = mysqli_query($koneksi, $sql_data_siswa);
 while ($data_siswa = mysqli_fetch_assoc($query_utama)) {
@@ -19,34 +19,34 @@ $query_foto_1 = mysqli_query($koneksi, $sql_foto_1);
 $query_foto_4 = mysqli_query($koneksi, $sql_foto_4);
 $query_foto_6 = mysqli_query($koneksi, $sql_foto_6);
 
-while($data_foto_1 = mysqli_fetch_assoc($query_foto_1)){
+while ($data_foto_1 = mysqli_fetch_assoc($query_foto_1)) {
     $foto_1 = $data_foto_1['foto'];
 }
 
-while($data_foto_4 = mysqli_fetch_assoc($query_foto_4)){
+while ($data_foto_4 = mysqli_fetch_assoc($query_foto_4)) {
     $foto_4 = $data_foto_4['foto'];
 }
 
-while($data_foto_6 = mysqli_fetch_assoc($query_foto_6)){
+while ($data_foto_6 = mysqli_fetch_assoc($query_foto_6)) {
     $foto_6 = $data_foto_6['foto'];
 }
 
 ?>
 
 <script>
-    function first(){
+    function first() {
         document.getElementById('foto')
-        .src="../foto/<?= !empty($foto_1) ? $foto_1 : 'kosong.png'; ?>";
-    }
-     
-    function second(){
-        document.getElementById('foto')
-        .src="../foto/<?= !empty($foto_4) ? $foto_4 : 'kosong.png'; ?>";
+            .src = "../foto/<?= !empty($foto_1) ? $foto_1 : 'kosong.png'; ?>";
     }
 
-    function third(){
+    function second() {
         document.getElementById('foto')
-        .src="../foto/<?= !empty($foto_6) ? $foto_6 : 'kosong.png'; ?>";
+            .src = "../foto/<?= !empty($foto_4) ? $foto_4 : 'kosong.png'; ?>";
+    }
+
+    function third() {
+        document.getElementById('foto')
+            .src = "../foto/<?= !empty($foto_6) ? $foto_6 : 'kosong.png'; ?>";
     }
 </script>
 
@@ -65,11 +65,14 @@ while($data_foto_6 = mysqli_fetch_assoc($query_foto_6)){
         <table class="table table-striped table-bordered mb-3">
             <thead>
                 <tr>
-                    <td colspan="2"><i class="fas fa-user-circle"></i>  
-                    <strong> Data Siswa<strong></td>
+                    <td colspan="2">
+                        <i class="fas fa-user-circle"></i>
+                        <strong> Data Siswa<strong>
+                                <a href="edit-data-siswa&data=<?php echo $nis; ?>&halaman=utama" class="ms-5 btn btn-xs btn-info"><i class="fas fa-edit"></i> Edit</a>
+                    </td>
                 </tr>
             </thead>
-            <tbody>   
+            <tbody>
                 <tr>
                     <th width="45%" scope="row">Nama</th>
                     <td><?= $nama; ?></td>
@@ -94,4 +97,3 @@ while($data_foto_6 = mysqli_fetch_assoc($query_foto_6)){
         </table>
     </div>
 </div>
-

@@ -48,11 +48,13 @@ while ($data_diri = mysqli_fetch_assoc($query_diri)) {
     <div class="col">
         <thead>
             <tr>
-                <td colspan="2"><i class="fas fa-user-circle"></i>  
-                <strong>Data Diri Siswa<strong></td>
+                <td colspan="2"><i class="fas fa-user-circle"></i>
+                    <strong>Data Diri Siswa<strong>
+                            <a href="edit-data-siswa&data=<?php echo $nis; ?>&halaman=diri" class="ms-5 btn btn-xs btn-info"><i class="fas fa-edit"></i> Edit</a>
+                </td>
             </tr>
         </thead>
-        <tbody class="col">  
+        <tbody class="col">
             <tr>
                 <th width="45%" scope="row">NIK</th>
                 <td><?= !empty($nik) ? $nik : "--"; ?></td>
@@ -80,7 +82,7 @@ while ($data_diri = mysqli_fetch_assoc($query_diri)) {
             <tr>
                 <th scope="row">Agama</th>
                 <td><?= !empty($agama) ? $agama : "--"; ?></td>
-            </tr>        
+            </tr>
             <tr>
                 <th scope="row">Jalan</th>
                 <td><?= !empty($jalan) ? $jalan : "--"; ?></td>
@@ -181,7 +183,7 @@ while ($data_diri = mysqli_fetch_assoc($query_diri)) {
                 <th scope="row">Sekolah Asal</th>
                 <td><?= !empty($sekolah_asal) ? $sekolah_asal : "--"; ?></td>
             </tr>
-            
+
             <tr>
                 <th scope="row">Berat Badan (KG)</th>
                 <td><?= !empty($berat_badan) ? $berat_badan : "--"; ?></td>
@@ -197,6 +199,3 @@ while ($data_diri = mysqli_fetch_assoc($query_diri)) {
         </tbody>
     </div>
 </table>
-
-
-    

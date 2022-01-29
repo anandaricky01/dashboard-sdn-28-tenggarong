@@ -1,30 +1,32 @@
-<?php 
-    $data = $_GET['data'];
-	$sql_data_siswa = "SELECT * FROM `data-sekolah-siswa` WHERE `nis`=$data";
-	$query_utama = mysqli_query($koneksi, $sql_data_siswa);
-    while($data_siswa = mysqli_fetch_assoc($query_utama)){
-        $id_sekolah = $data_siswa['id'];
-        $skhun = $data_siswa['skhun'];
-        $penerima_kps = $data_siswa['penerima_kps'];
-        $no_kps = $data_siswa['no_kps'];
-        $no_ujian_nasional = $data_siswa['no_ujian_nasional'];
-        $no_ijazah = $data_siswa['no_ijazah'];
-        $penerima_kip = $data_siswa['penerima_kip'];
-        $no_kip = $data_siswa['no_kip'];
-        $nama_kip = $data_siswa['nama_kip'];
-        $layak_pip = $data_siswa['layak_pip'];
-        $alasan_pip = $data_siswa['alasan_pip'];
-    }
- ?>
+<?php
+$data = $_GET['data'];
+$sql_data_siswa = "SELECT * FROM `data-sekolah-siswa` WHERE `nis`=$data";
+$query_utama = mysqli_query($koneksi, $sql_data_siswa);
+while ($data_siswa = mysqli_fetch_assoc($query_utama)) {
+    $id_sekolah = $data_siswa['id'];
+    $skhun = $data_siswa['skhun'];
+    $penerima_kps = $data_siswa['penerima_kps'];
+    $no_kps = $data_siswa['no_kps'];
+    $no_ujian_nasional = $data_siswa['no_ujian_nasional'];
+    $no_ijazah = $data_siswa['no_ijazah'];
+    $penerima_kip = $data_siswa['penerima_kip'];
+    $no_kip = $data_siswa['no_kip'];
+    $nama_kip = $data_siswa['nama_kip'];
+    $layak_pip = $data_siswa['layak_pip'];
+    $alasan_pip = $data_siswa['alasan_pip'];
+}
+?>
 
 <table class="table table-striped table-bordered mb-3">
     <thead>
         <tr>
-            <td colspan="2"><i class="fas fa-user-circle"></i>  
-            <strong>Data Sekolah Siswa<strong></td>
-        </tr> 
+            <td colspan="2"><i class="fas fa-user-circle"></i>
+                <strong>Data Sekolah Siswa<strong>
+                        <a href="edit-data-siswa&data=<?php echo $nis; ?>&halaman=sekolah" class="ms-5 btn btn-xs btn-info"><i class="fas fa-edit"></i> Edit</a>
+            </td>
+        </tr>
     </thead>
-    <tbody>               
+    <tbody>
         <tr>
             <th width="45%" scope="row">SKHUN</th>
             <td><?= !empty($skhun) ? $skhun : "--"; ?></td>

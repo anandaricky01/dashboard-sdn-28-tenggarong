@@ -1,6 +1,6 @@
 <?php
-    $sql_ayah = "SELECT * FROM `data-ayah` WHERE `nis`=$data";
-    $query_ayah = mysqli_query($koneksi, $sql_ayah);
+$sql_ayah = "SELECT * FROM `data-ayah` WHERE `nis`=$data";
+$query_ayah = mysqli_query($koneksi, $sql_ayah);
 
 while ($data_ayah = mysqli_fetch_assoc($query_ayah)) {
     $id = $data_ayah['id'];
@@ -20,11 +20,13 @@ while ($data_ayah = mysqli_fetch_assoc($query_ayah)) {
 <table class="table table-striped table-bordered mb-3">
     <thead>
         <tr>
-            <td colspan="2"><i class="fas fa-user-circle"></i>  
-            <strong>Data Ayah Siswa<strong></td>
-        </tr>   
+            <td colspan="2"><i class="fas fa-user-circle"></i>
+                <strong>Data Ayah Siswa<strong>
+                        <a href="edit-data-siswa&data=<?php echo $nis; ?>&halaman=ayah" class="ms-5 btn btn-xs btn-info"><i class="fas fa-edit"></i> Edit</a>
+            </td>
+        </tr>
     </thead>
-    <tbody>             
+    <tbody>
         <tr>
             <th width="45%" scope="row">Nama</th>
             <td><?= !empty($nama_ayah) ? $nama_ayah : "--"; ?></td>

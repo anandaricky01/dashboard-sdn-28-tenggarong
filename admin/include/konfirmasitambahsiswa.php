@@ -14,21 +14,5 @@
 		$sql = "INSERT INTO `data-utama-siswa`(`id`, `nama`, `nis`, `nisn`, `kelas`, `tahun_masuk`, `jenis_kelamin`) VALUES (NULL,'$nama','$nis','$nisn','$kelas','$tahun_masuk','$jenis_kelamin')";
 		mysqli_query($koneksi,$sql);
 
-		$sql = "INSERT INTO `data-sekolah-siswa`(`id`, `nis`) VALUES (NULL,'$nis')";
-		mysqli_query($koneksi,$sql);
-
-		$sql = "INSERT INTO `data-diri-siswa`(`id`, `nis`) VALUES (NULL,'$nis')";
-		mysqli_query($koneksi,$sql);
-
-		$sql = "INSERT INTO `data-ibu`(`id`, `nis`) VALUES (NULL,'$nis')";
-		mysqli_query($koneksi,$sql);
-
-		$sql = "INSERT INTO `data-ayah`(`id`, `nis`) VALUES (NULL,'$nis')";
-		mysqli_query($koneksi,$sql);
-
-		$sql = "INSERT INTO `data-wali`(`id`, `nis`) VALUES (NULL,'$nis')";
-		mysqli_query($koneksi,$sql);
-
 	header("Location:data-siswa&notif=tambahberhasil");	
 	}
-?>
