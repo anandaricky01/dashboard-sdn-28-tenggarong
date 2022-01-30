@@ -140,7 +140,7 @@
               <?php 
               //hitung jumlah semua data 
                   $sql_jum = "SELECT `id` FROM `data-utama-siswa`"; 
-                    if (!empty($katakunci_kategori)){
+                    if (!empty($katakunci)){
                         $sql_jum .= " WHERE `nama` LIKE '%$katakunci%'";
                     } 
                     $sql_jum .= " order by `nama`";

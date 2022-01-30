@@ -4,6 +4,7 @@ $query_ibu = mysqli_query($koneksi, $sql_ibu);
 
 while ($data_ibu = mysqli_fetch_assoc($query_ibu)) {
     $id = $data_ibu['id'];
+    $nik_ibu = $data_ibu['nik_ibu'];
     $nama_ibu = $data_ibu['nama_ibu'];
     $tempat_lahir_ibu = $data_ibu['tempat_lahir_ibu'];
     $tanggal_lahir_ibu = $data_ibu['tanggal_lahir_ibu'];
@@ -30,6 +31,10 @@ while ($data_ibu = mysqli_fetch_assoc($query_ibu)) {
         <tr>
             <th width="45%" scope="row">Nama</th>
             <td><?= !empty($nama_ibu) ? $nama_ibu : "--"; ?></td>
+        </tr>
+        <tr>
+            <th width="45%" scope="row">NIK</th>
+            <td><?= !empty($nik_ibu) ? $nik_ibu : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Tempat Lahir</th>

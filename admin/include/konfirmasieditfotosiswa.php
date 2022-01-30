@@ -65,7 +65,7 @@
 
 			// rename nama file
 			$temp = explode(".", $foto["foto_1"]["name"]);
-			$newfilename = round(microtime(true)) . '1' .'.' . end($temp);
+			$newfilename = md5(rand()) . '1' .'.' . end($temp);
 			move_uploaded_file($foto["foto_1"]["tmp_name"], "../foto/" . $newfilename);
 
 			// masukan ke database
@@ -88,7 +88,7 @@
 
 			// rename nama file
 			$temp = explode(".", $foto["foto_4"]["name"]);
-			$newfilename = round(microtime(true)) . '1' . '.' . end($temp);
+			$newfilename = md5(rand()) . '1' . '.' . end($temp);
 			move_uploaded_file($foto["foto_4"]["tmp_name"], "../foto/" . $newfilename);
 
 			// masukan ke database
@@ -111,7 +111,7 @@
 
 			// rename nama file
 			$temp = explode(".", $foto["foto_6"]["name"]);
-			$newfilename = round(microtime(true)) . '6' . '.' . end($temp);
+			$newfilename = md5(rand()) . '6' . '.' . end($temp);
 			move_uploaded_file($foto["foto_6"]["tmp_name"], "../foto/" . $newfilename);
 
 			// masukan ke database
@@ -145,7 +145,7 @@
 				unlink("../foto/" . $oldFileName_1['foto']);
 
 				$temp_1 = explode(".", $foto["foto_1"]["name"]);
-				$newfilename_1 = round(microtime(true)) . '1' .  '.' . end($temp_1);
+				$newfilename_1 = md5(rand()) . '1' .  '.' . end($temp_1);
 
 				move_uploaded_file($foto["foto_1"]["tmp_name"], "../foto/" . $newfilename_1);
 
@@ -169,12 +169,12 @@
 
 				// rename nama file
 				$temp_1 = explode(".", $foto["foto_1"]["name"]);
-				$newfilename_1 = round(microtime(true)) . '1' . '.' . end($temp_1);
+				$newfilename_1 = md5(rand()) . '1' . '.' . end($temp_1);
 				move_uploaded_file($foto["foto_1"]["tmp_name"], "../foto/" . $newfilename_1);
 
 				// masukan ke database
 				$sql_input_1 = "INSERT INTO `foto-siswa`(`id`, `nis`, `foto`, `kelas`) VALUES (NULL,'$nis','$newfilename_1','1')";
-				mysqli_query($koneksi, $sql_input);
+				mysqli_query($koneksi, $sql_input_1);
 			}
 		}
 
@@ -200,7 +200,7 @@
 				unlink("../foto/" . $oldFileName_4['foto']);
 
 				$temp_4 = explode(".", $foto["foto_4"]["name"]);
-				$newfilename_4 = round(microtime(true)) . '4' . '.' . end($temp_4);
+				$newfilename_4 = md5(rand()) . '4' . '.' . end($temp_4);
 				move_uploaded_file($foto["foto_4"]["tmp_name"], "../foto/" . $newfilename_4);
 
 				$sql_update_4 = "UPDATE `foto-siswa` SET `foto`='$newfilename_4' WHERE `nis`='$nis' AND `kelas`='4'";
@@ -222,7 +222,7 @@
 
 				// rename nama file
 				$temp_4 = explode(".", $foto["foto_4"]["name"]);
-				$newfilename_4 = round(microtime(true)) . '4' . '.' . end($temp_4);
+				$newfilename_4 = md5(rand()) . '4' . '.' . end($temp_4);
 				move_uploaded_file($foto["foto_4"]["tmp_name"], "../foto/" . $newfilename_4);
 
 				// masukan ke database
@@ -253,7 +253,7 @@
 				unlink("../foto/" . $oldFileName_6['foto']);
 
 				$temp_6 = explode(".", $foto["foto_6"]["name"]);
-				$newfilename_6 = round(microtime(true)) . '6' . '.' . end($temp_6);
+				$newfilename_6 = md5(rand()) . '6' . '.' . end($temp_6);
 				move_uploaded_file($foto["foto_6"]["tmp_name"], "../foto/" . $newfilename_6);
 
 				$sql_update_6 = "UPDATE `foto-siswa` SET `foto`='$newfilename_6' WHERE `nis`='$nis' AND `kelas`='6'";
@@ -275,7 +275,7 @@
 
 				// rename nama file
 				$temp_6 = explode(".", $foto["foto_6"]["name"]);
-				$newfilename_6 = round(microtime(true)) . '6' . '.' . end($temp_6);
+				$newfilename_6 = md5(rand()) . '6' . '.' . end($temp_6);
 				move_uploaded_file($foto["foto_6"]["tmp_name"], "../foto/" . $newfilename_6);
 
 				// masukan ke database
@@ -287,9 +287,3 @@
 	}
 
 	die;
-
-
-
-
-
- ?>

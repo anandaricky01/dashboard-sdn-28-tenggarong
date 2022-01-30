@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-5">
                         <div class="text-center">
-                            <img id="foto" class="img-thumbnail mb-4" src="../foto/<?= !empty($FOTO) ? $FOTO : 'kosong.png'; ?>" alt="Foto Guru" width="300px">
+                            <img id="foto" class="img-thumbnail mb-4" src="../fotoGuru/<?= !empty($FOTO) ? $FOTO : 'kosong.png'; ?>" alt="Foto Guru" width="300px">
                         </div>
                     </div>
                     <div class="col-7">

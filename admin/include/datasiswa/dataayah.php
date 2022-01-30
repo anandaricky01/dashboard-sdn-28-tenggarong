@@ -4,6 +4,7 @@ $query_ayah = mysqli_query($koneksi, $sql_ayah);
 
 while ($data_ayah = mysqli_fetch_assoc($query_ayah)) {
     $id = $data_ayah['id'];
+    $nik_ayah = $data_ayah['nik_ayah'];
     $nama_ayah = $data_ayah['nama_ayah'];
     $tempat_lahir_ayah = $data_ayah['tempat_lahir_ayah'];
     $tanggal_lahir_ayah = $data_ayah['tanggal_lahir_ayah'];
@@ -30,6 +31,10 @@ while ($data_ayah = mysqli_fetch_assoc($query_ayah)) {
         <tr>
             <th width="45%" scope="row">Nama</th>
             <td><?= !empty($nama_ayah) ? $nama_ayah : "--"; ?></td>
+        </tr>
+        <tr>
+            <th width="45%" scope="row">NIK</th>
+            <td><?= !empty($nik_ayah) ? $nik_ayah : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Tempat Lahir</th>

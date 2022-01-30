@@ -4,6 +4,7 @@ $query_wali = mysqli_query($koneksi, $sql_wali);
 
 while ($data_wali = mysqli_fetch_assoc($query_wali)) {
     $id = $data_wali['id'];
+    $nik_wali = $data_wali['nik_wali'];
     $nama_wali = $data_wali['nama_wali'];
     $tempat_lahir_wali = $data_wali['tempat_lahir_wali'];
     $tanggal_lahir_wali = $data_wali['tanggal_lahir_wali'];
@@ -30,6 +31,10 @@ while ($data_wali = mysqli_fetch_assoc($query_wali)) {
         <tr>
             <th width="45%" scope="row">Nama</th>
             <td ><?= !empty($nama_wali) ? $nama_wali : "--"; ?></td>
+        </tr>
+        <tr>
+            <th width="45%" scope="row">NIK</th>
+            <td><?= !empty($nik_wali) ? $nik_wali : "--"; ?></td>
         </tr>
         <tr>
             <th scope="row">Tempat Lahir</th>
