@@ -5,7 +5,7 @@ $query = mysqli_query($koneksi, $sql_data_siswa);
 while ($data_siswa = mysqli_fetch_assoc($query)) {
     $id = $data_siswa['id'];
     $nik_wali = $data_siswa['nik_wali'];
-    $nama = $data_siswa['nama_wali'];
+    $nama_wali = $data_siswa['nama_wali'];
     $tempat_lahir = $data_siswa['tempat_lahir_wali'];
     $tanggal_lahir = $data_siswa['tanggal_lahir_wali'];
     $nohp = $data_siswa['nohp_wali'];
@@ -23,7 +23,7 @@ while ($data_siswa = mysqli_fetch_assoc($query)) {
         <tbody>
             <tr>
                 <th scope="row">Nama</th>
-                <td><?= !empty($nama) ? $nama : "--"; ?></td>
+                <td><?= !empty($nama_wali) ? $nama_wali : "--"; ?></td>
             </tr>
             <tr>
                 <th scope="row">NIK</th>

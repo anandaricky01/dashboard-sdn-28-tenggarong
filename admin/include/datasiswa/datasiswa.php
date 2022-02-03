@@ -93,6 +93,10 @@ while ($data_foto_6 = mysqli_fetch_assoc($query_foto_6)) {
                     <th scope="row">Tahun Masuk</th>
                     <td><?= $tahun_masuk; ?></td>
                 </tr>
+                <tr>
+                    <th scope="row">Jenis Kelamin</th>
+                    <td><?= $jenis_kelamin == 'L' ? 'Laki - Laki' : 'Perempuan'; ?></td>
+                </tr>
             </tbody>
         </table>
     </div>

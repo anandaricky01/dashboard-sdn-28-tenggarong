@@ -150,10 +150,6 @@ if (isset($_SESSION['nis'])) {
         }
     } else if ($halaman == 'utama') {
 
-        if (empty($nama) || empty($nisn) || empty($kelas) || empty($tahun_masuk) || empty($jenis_kelamin)) {
-            header("Location:detail-data-siswa&notif=editkosong");
-            die;
-        }
         // data utama
         $nama = $_POST['nama'];
         $nisn = $_POST['nisn'];
@@ -161,11 +157,16 @@ if (isset($_SESSION['nis'])) {
         $tahun_masuk = $_POST['tahun_masuk'];
         $jenis_kelamin = $_POST['jenis_kelamin'];
 
+        if (empty($nama) || empty($nisn) || empty($kelas) || empty($tahun_masuk) || empty($jenis_kelamin) || empty($nis)) {
+            header("Location:detail-data-siswa&notif=editkosong&data=$nis");
+            die;
+        }
         // data utama
         $sql = "UPDATE `data-utama-siswa` SET `nama`='$nama', `nis`='$nis', `nisn`='$nisn', `kelas`='$kelas', `tahun_masuk`='$tahun_masuk', `jenis_kelamin`='$jenis_kelamin' WHERE `nis`='$nis'";
+
         mysqli_query($koneksi, $sql);
     } else {
-        header("Location:detail-data-siswa&notif=editkosong");
+        header("Location:detail-data-siswa&notif=editkosong&data=$nis&halaman=$halaman");
     }
 
     unset($_SESSION['nis']);

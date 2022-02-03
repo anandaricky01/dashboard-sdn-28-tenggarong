@@ -53,7 +53,6 @@ if (isset($_SESSION['NO'])) {
 	$namaFoto = $FOTO['name'];
 	$lokasiFoto = $FOTO['tmp_name'];
 	$ext = end(explode('.', $namaFoto)); // upload file ext
-	echo $ext;
 	$path = "../fotoGuru/";
 
 	if (empty($id) || empty($nama) || empty($nip) || empty($kode) || empty($tugas_jabatan) || empty($jenis_kelamin)) {
@@ -68,5 +67,6 @@ if (isset($_SESSION['NO'])) {
 		mysqli_query($koneksi, $sql);
 		unset($_SESSION['NO']);
 		header("Location:data-guru&notif=editberhasil");
+		die;
 	}
 }

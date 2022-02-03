@@ -36,7 +36,7 @@ while ($data_siswa = mysqli_fetch_assoc($query_data_siswa)) {
             NIPD
         </label>
         <div class="col-sm-7">
-            <input type="text" class="form-control" id="nis" Name="nis" value="<?php echo $nis; ?>" required>
+            <?php echo $nis; ?>
         </div>
     </div>
 

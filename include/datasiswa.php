@@ -12,7 +12,7 @@
     }
 
     // batas data yang terlihat
-    $batas = 2;
+    $batas = 5;
 
     // apakah tidak terdapat variabel get halaman
     if(!isset($_GET['halaman'])){
