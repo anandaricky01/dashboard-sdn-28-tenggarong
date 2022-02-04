@@ -5,8 +5,12 @@ if ((isset($_GET['aksi'])) && (isset($_GET['data']))) {
     $foto = $_GET['foto'];
     //hapus kategori buku
     $sql_dh = "DELETE FROM `data-guru` WHERE `NO` = '$id'";
+    $fotoGuru = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT `FOTO` FROM `data-guru` WHERE `NO` = '$id'"))['FOTO'];
+
+    if (!empty($fotoGuru)) {
+      unlink("../fotoGuru/" . $foto);
+    }
     mysqli_query($koneksi, $sql_dh);
-    unlink("../fotoGuru/" . $foto);
   }
 }
 

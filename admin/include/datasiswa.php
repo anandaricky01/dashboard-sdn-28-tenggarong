@@ -5,6 +5,21 @@ if ((isset($_GET['aksi'])) && (isset($_GET['data']))) {
     $nis = $_GET['data'];
     //hapus Kategori Kegiatan
     $sql_dh = "DELETE FROM `data-utama-siswa` WHERE `nis` = '$nis'";
+    $foto_1 = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT `foto` FROM `foto-siswa` WHERE `nis`='$nis' AND `kelas` = '1'"))['foto'];
+    $foto_4 = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT `foto` FROM `foto-siswa` WHERE `nis`='$nis' AND `kelas` = '4'"))['foto'];
+    $foto_6 = mysqli_fetch_assoc(mysqli_query($koneksi, "SELECT `foto` FROM `foto-siswa` WHERE `nis`='$nis' AND `kelas` = '6'"))['foto'];
+    if (!empty($foto_1)) {
+      unlink('../fotoGuru/' . $foto_1);
+    }
+
+    if (!empty($foto_4)) {
+      unlink('../fotoGuru/' . $foto_4);
+    }
+
+    if (!empty($foto_6)) {
+      unlink('../fotoGuru/' . $foto_6);
+    }
+
     mysqli_query($koneksi, $sql_dh);
 
     $sql_dh = "DELETE FROM `data-sekolah-siswa` WHERE `nis` = '$nis'";
