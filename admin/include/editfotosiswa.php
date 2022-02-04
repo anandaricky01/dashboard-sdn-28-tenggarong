@@ -71,8 +71,26 @@ if (isset($_GET['data'])) {
     </div>
     <form class="form-horizontal" method="POST" action="konfirmasi-edit-foto-siswa" enctype="multipart/form-data">
 
-      <div class="card-body">
+    <div class="card-body">
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <div class="alert alert-primary text-center" role="alert">
+              Foto Harus berformat .jpg atau .png!
+            </div>
+          </div>
+        </div>
 
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <div class="alert alert-primary text-center" role="alert">
+              Ukuran Foto tidak boleh lebih besar dari 5MB!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+          
         <div class="form-group row">
           <label for="foto" class="col-sm-2 col-form-label">Foto Kelas 1</label>
           <div class="col-sm-9">

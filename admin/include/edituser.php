@@ -67,15 +67,6 @@ if (isset($_GET['data'])) {
           <input type="hidden" name="id_user" value="<?php echo $id_user; ?>">
         </div>
         <div class="form-group row">
-          <label for="foto" class="col-sm-3 col-form-label">Foto </label>
-          <div class="col-sm-7">
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" name="foto" id="customFile">
-              <label class="custom-file-label" for="customFile">Choose file</label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
           <label for="nama" class="col-sm-3 col-form-label">Nama</label>
           <div class="col-sm-7">
             <input type="text" class="form-control" name="nama" id="nama" value="<?php echo $nama; ?>">

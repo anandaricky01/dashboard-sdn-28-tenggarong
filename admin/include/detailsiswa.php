@@ -22,7 +22,6 @@
       <div class="card">
         <div class="card-header">
           <div class="card-tools">
-            <a href="edit-data-siswa&data=<?php echo $data; ?>" class="btn btn-sm btn-info float-right"><i class="fas fa-edit"></i> Edit Data Siswa</a>
             <a href="data-siswa" class="btn btn-sm btn-warning float-right">
             <i class="fas fa-arrow-alt-circle-left"></i> Kembali</a>
           </div>
