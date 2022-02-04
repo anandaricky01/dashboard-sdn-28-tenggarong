@@ -65,7 +65,7 @@
         <div class="modal-body container">
             <div class="row">
                 <div class="col text-center">
-                    <img id="foto" class="img-thumbnail mb-4" src="../foto/<?= !empty($FOTO) ? $FOTO : 'kosong.png'; ?>" alt="Foto Guru" width="300px">
+                    <img id="foto" class="img-thumbnail mb-4" src="fotoGuru/<?= !empty($FOTO) ? $FOTO : 'kosong.png'; ?>" alt="Foto Guru" width="300px">
                 </div>
                 <div class="col p-2">
                     <div class="container">
